@@ -54,3 +54,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/lincbrain
       name: GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/lincbrain
+      name: Docker Hub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/lincbrain-cli
+      name: PyPI
