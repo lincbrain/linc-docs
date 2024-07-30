@@ -22,7 +22,7 @@ nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
   - API:
-    - LINC Client: https://lincbrain-docs.readthedocs.io
+    - LINC Client: https://lincbrain.readthedocs.io
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
