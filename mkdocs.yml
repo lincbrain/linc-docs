@@ -21,6 +21,8 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - API:
+    - LINC Client: https://lincbrain-docs.readthedocs.io
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
