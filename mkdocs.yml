@@ -23,6 +23,8 @@ nav:
   - Upload data: "upload.md"
   - API:
     - LINC Client: https://lincbrain.readthedocs.io
+  - Data:
+    - HiP-CT: "data/hipct.md"
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
@@ -34,6 +36,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - toc:
       permalink: True
+  - pymdownx.arithmatex:
+      generic: true
 
 # List of plugins
 plugins:
@@ -62,3 +66,8 @@ extra:
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/lincbrain-cli
       name: PyPI
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
