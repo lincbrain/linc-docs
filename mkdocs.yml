@@ -21,6 +21,7 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - DANDI Docs: https://www.dandiarchive.org/handbook
   - API:
     - LINC Client: https://lincbrain.readthedocs.io
   - Contribute documentation: "contribute.md"
