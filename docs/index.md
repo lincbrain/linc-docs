@@ -17,6 +17,8 @@ motor and psychiatric disorders.
 
 The LINC documentation is meant to share information across the LINC project investigators.  If you are new to the LINC project, you can start on the [Upload data](upload.md) page for a description of how to interact with the LINC data sharing platform.
 
+Since the LINC infrastructure is a fork of the DANDI Archive, please refer to the [DANDI Docs](https://www.dandiarchive.org/handbook) for comprehensive documentation (and in the example commands replace `dandi` with `lincbrain`).
+
 ## Quick Links
 
 - [LINC Homepage](https://connects.mgh.harvard.edu/)
