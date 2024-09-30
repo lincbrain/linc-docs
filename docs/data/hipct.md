@@ -4,16 +4,16 @@ HiP-CT stands for hierarchical phase-contrast tomography.
 For more information on the modality see the [HiP-CT website](https://mecheng.ucl.ac.uk/hip-ct/).
 Most of the time HiP-CT consists of a single 'low' (but still quite high!) resolution scan of a whole sample, and then one or more 'high' resolution scans of particular volumes of interest within the same sample.
 
-## Data information
+## Data acquisition and naming
 
 There are HiP-CT scans of two donors, S45 and I58.
 The data are part of the [Pilot human brains dataset](https://lincbrain.org/dandiset/000005) on lincbrain.
 
 Datasets have the name `sub-<donor>_sample-<sample name>_chunk<chunk number>_PC.ome.zarr`.
 The chunk number is set to `yyxx`, where yy is the resolution of the scan in micrometers, and xx is a scan number that is unique between datasets.
-For example, a scan number of `402` is the second 4um scan.
-The highest lowest resolution dataset (equivalently, highest chunk number) is the overview dataset that contains an image of the whole sample.
-There are then one or more datsets at higher resolution.
+For example, a chunk number of `402` is the second 4um scan.
+The lowest resolution dataset (equivalently, highest chunk number) is the overview dataset that contains an image of the whole sample.
+There are then one or more datasets at higher resolution.
 
 ## Registration
 
