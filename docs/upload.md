@@ -139,6 +139,20 @@ This directory contains microscopy data files [as described in detail in the BID
 
 In this example the data include images (`.tif`) and metadata (`.json`) from multiple brain sections. For each section there is a blockface photo (`_photo`) and a histological stain (`_stain`). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (`_BF`), or processed for the fluorescent tracer Lucifer Yellow (`LY`) and imaged under darkfield microscopy (`_DF`). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (`FR`) and imaged under darkfield microscopy (`_DF`).
 
+
+#### high-res histology annotation
+All datasets used for annotations use the same naming scheme as the rawdata.
+
+All annotation files use the following naming scheme:
+dataset name + _suffix 
+when annotaing discrete segmentations, use _dseg as the suffix.
+
+When there are multiple annotators working on the same dataset, each annotation file is distinguish by adding a _desc-[label] entity before the suffix, where [label] is replaced by the annotator's initials.
+
+For example, an annotator with an initial JS would name the anotation file as sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg
+
+
+
 ### samples.tsv
 This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file). For Ken1, the `samples.tsv` would look like this:
 
@@ -149,6 +163,7 @@ sub-Ken1 sample-slice0002 tissue
 sub-Ken1 sample-slice0009 tissue
 sub-Ken1 sample-slice0010 tissue
 ```
+
 
 ## Upload your data
 Upload the data from your local machine to lincbrain.org:
