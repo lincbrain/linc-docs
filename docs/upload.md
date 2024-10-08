@@ -145,11 +145,11 @@ All datasets used for annotations use the same naming scheme as the rawdata.
 
 All annotation files use the following naming scheme:
 dataset name + _suffix 
-when annotaing discrete segmentations, use _dseg as the suffix.
+when annotating discrete segmentations, use _dseg as the suffix.
 
 When there are multiple annotators working on the same dataset, each annotation file is distinguish by adding a _desc-[label] entity before the suffix, where [label] is replaced by the annotator's initials.
 
-For example, an annotator with an initial JS would name the anotation file as sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg
+For example, an annotator with an initial JS would name the annotation file as sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg
 
 
 
