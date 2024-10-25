@@ -26,8 +26,8 @@ to a slow interpreted mode.
 
 ## Installation
 
-Simply follow the instructions on [`julialang.org/downloads'](https://julialang.org/downloads/), which 
-we recpliate here (but do check that they are still up-to-date!)
+Simply follow the instructions on [`julialang.org/downloads`](https://julialang.org/downloads/), which 
+we replicate here (but do check that they are still up-to-date!)
 
 ```shell
 curl -fsSL https://install.julialang.org | sh
@@ -88,6 +88,100 @@ We'll assume that you have installed VSCode. To install the extension, select th
 
 ## REPL
 
+I will redirect you to the tutorial [___From Zero to Julia___](https://techytok.com/from-zero-to-julia/).
+
 ## Creating a project
 
-Let's start a new small project. I've created a folder `/PATH/TO/MY/PROJECTS/smallproject` (or even better, I've create a github repo at `https://github.com/<USERNAME>/smallproject` and cloned it at `/PATH/TO/MY/PROJECTS/smallproject`) and opened it in vscode (`File > Open Folder...`). We will know initialize this folder as a Julia project. Using well defined projects rather than free standing collections of scripts is advantageous because it allows julia to automatically keep track of our dependencies (_i.e._, the packages we used and their versions).
+Let's start a new small project. I've created a folder `/PATH/TO/MY/PROJECTS/smallproject` (or even better, I've create a github repo at `https://github.com/<USERNAME>/smallproject` and cloned it at `/PATH/TO/MY/PROJECTS/smallproject`) and opened it in vscode
+```
+File > Open Folder...
+```
+We will know initialize this folder as a Julia project. Using well defined projects rather than free standing collections of scripts is advantageous because it allows julia to automatically keep track of our dependencies (_i.e._, the packages we used and their versions).
+
+Let's open a terminal
+```
+Terminal > New Terminal
+```
+and launch the Julia REPL
+```shell
+$ julia
+```
+```julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.11.1 (2024-10-16)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia> 
+```
+
+We can now press `]` to enter the Pkg REPL mode
+```julia
+pkg>
+```
+and add the library [`PkgTemplates.jl`](https://github.com/JuliaCI/PkgTemplates.jl) to our project
+```julia
+pkg> add PkgTemplates
+```
+Using the pkg mode avoids having to manually use the `Pkg.jl` library. Otherwise, we'd have to do
+```julia
+julia> using Pkg; Pkg.add("PkgTemplates")
+```
+To exist the Pkg REPL mode, type `CTRL` `C` (or `^` `C` on mac).
+
+We can now use `PkgTemplates` and instantiate our project
+```julia
+using PkgTemplates
+tpl = Template(dir=".", plugins=[Git(; manifest=true, ssh=true)])
+tpl("MyProject.jl")
+```
+The `Template()` constructor assumes the existence of some preexisting 
+Git configuration (show configuration using git config --list and set with git config --global):
+
+- `user.name`: Your real name, e.g. John Smith.
+- `user.email`: Your email address, eg. john.smith@acme.corp.
+- `github.user`: Your GitHub username: e.g. john-smith.
+
+There are other options available, described in the [user guide](https://juliaci.github.io/PkgTemplates.jl/stable/user/)
+
+> [!WARNING]
+>
+> On Julia 1.11, when using a user-defined `JULIA_DEPOT_PATH` which is our case),
+> the call to `using PkgTemplates` throws the following error:
+> ```julia
+> julia> using PkgTemplates
+> ERROR: InitError: MethodError: no method matching repl_init(::REPL.LineEditREPL)
+> The function `repl_init` exists, but no method is defined for this combination of argument types.
+> ```
+> This is [a known bug](https://github.com/JuliaLang/julia/issues/56216) reported in Oct 2024.
+> A second call to
+> ```julia
+> julia> using PkgTemplates
+> ```
+> is succesful.
+> 
+> A reported alternative solution is to insert
+> ```julia
+> using Pkg
+> ```
+> in the file `${JULIA_DEPOT_PATH}/config/startup.jl`
+
+At this point, the following directory and file structure has been created
+```
+.
+└── MyProject.jl
+    ├── LICENSE
+    ├── Manifest.toml
+    ├── Project.toml
+    ├── README.md
+    ├── src
+    │   └── MyProject.jl
+    └── test
+        └── runtests.jl
+```
+
+If we were to write a ___Package___, our code would go under `MyProject.jl/src` and would be included in the module file `MyProject.jl/src/MyProject.jl`. However, here we will only write a small ___Project___, so we'll create a `MyProject.jl/scripts` folder inside which we'll create a file `MyProject.jl/scripts/myscript.jl`.
