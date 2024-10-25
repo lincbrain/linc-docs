@@ -1,5 +1,30 @@
 # Starting with Julia
 
+#### External resources
+
+- [Julia official website](https://julialang.org)
+- [Julia documentation](https://docs.julialang.org)
+- [Julia tutorials](https://julialang.org/learning/)
+- [From Zero to Julia](https://techytok.com/from-zero-to-julia/)
+- [Modern Julia Workflows](https://modernjuliaworkflows.org)
+
+#### LINC Julia packages
+
+- [Fibers.jl](https://github.com/lincbrain/Fibers.jl)
+- [Microstructure.jl](https://github.com/Tinggong/Microstructure.jl)
+- [NIfTIZarr.jl](https://github.com/neuroscales/nifti-zarr/tree/impl/0.2/julia)
+
+#### External packages
+
+- [Pluto.jl](https://plutojl.org/) - Online Julia notebooks
+- [Flux.jl](https://github.com/FluxML/Flux.jl) - Machine learning
+- [Turing.jl](https://github.com/TuringLang/Turing.jl) - Bayesian inference with probabilistic programming
+- [DifferentialEquations.jl](https://github.com/SciML/DifferentialEquations.jl) - Differential equation solvers
+- [NIfTI.jl](https://github.com/JuliaNeuroscience/NIfTI.jl) - Read and write NIfTI files
+- [Zarr.jl](https://github.com/JuliaIO/Zarr.jl) - Read and write Zarr files
+- [Plots.jl](https://github.com/JuliaPlots/Plots.jl) - Plots and graphs
+- [Makie.jl](https://github.com/MakieOrg/Makie.jl) - Alternative plots and graphs
+
 ## Overview
 
 __Julia__ is a programming language with a strong focus on numerical computing. 
