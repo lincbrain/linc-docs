@@ -28,7 +28,7 @@ The following steps provide instructions for adding assets from the LINC Data Pl
 
     ![](img/webknossos_name_field.png)
 
-    - For a Webknossos dataset with a single layer, the name should match the file naming convention on the LINC Data Platform and add a prefix with the dataset identifier (i.e. `dataset-id_filename.ome.zarr`).  For example, the last Zarr asset in the figure below would be named as follows: `000003_sub-MN115_sample-slice0000slice0025_stain-LY_DF.ome.zarr`
+    - For a Webknossos dataset with a single layer, the name should match the file naming convention on the LINC Data Platform and add a prefix with the dataset identifier (i.e. `<dataset-id>_<filename>.ome.zarr`).  For example, the last Zarr asset in the figure below would be named as follows: `000003_sub-MN115_sample-slice0000slice0025_stain-LY_DF.ome.zarr`
 
         ![](img/webknossos_dataset_name.png)
 
