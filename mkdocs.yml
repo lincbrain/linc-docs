@@ -28,6 +28,8 @@ nav:
   - DANDI Docs: https://www.dandiarchive.org/handbook
   - API:
     - LINC Client: https://lincbrain.readthedocs.io
+  - Development:
+    - Julia: "julia.md"
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
