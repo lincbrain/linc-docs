@@ -19,7 +19,7 @@ Julia is particularly appealing for applications that are cannot be massively pa
 (think tractography) or where they are but each operation is computationally and mathematicaly 
 involved (think Monte Carlo approaches for _e.g._ micostructure modeling). Julia is both 
 easy to learn (its syntax is matlab-like by design) and difficult to master (it relies on 
-patterns and concepts, such as multiple dispatch and type inference that are not common). 
+patterns and concepts, such as multiple dispatch and type inference, that are not common). 
 While is is not a strongly typed languages, it only reaches C-like performance if types 
 can be properly inferred by the JIT engine. If they are not, it essentially falls back 
 to a slow interpreted mode.
@@ -88,3 +88,6 @@ We'll assume that you have installed VSCode. To install the extension, select th
 
 ## REPL
 
+## Creating a project
+
+Let's start a new small project. I've created a folder `/PATH/TO/MY/PROJECTS/smallproject` (or even better, I've create a github repo at `https://github.com/<USERNAME>/smallproject` and cloned it at `/PATH/TO/MY/PROJECTS/smallproject`) and opened it in vscode (`File > Open Folder...`). We will know initialize this folder as a Julia project. Using well defined projects rather than free standing collections of scripts is advantageous because it allows julia to automatically keep track of our dependencies (_i.e._, the packages we used and their versions).
