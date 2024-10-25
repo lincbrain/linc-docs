@@ -96,6 +96,9 @@ Let's start a new small project. I've created a folder `/PATH/TO/MY/PROJECTS/sma
 ```
 File > Open Folder...
 ```
+
+### Instantiate the project
+
 We will know initialize this folder as a Julia project. Using well defined projects rather than free standing collections of scripts is advantageous because it allows julia to automatically keep track of our dependencies (_i.e._, the packages we used and their versions).
 
 Let's open a terminal
@@ -184,4 +187,15 @@ At this point, the following directory and file structure has been created
         └── runtests.jl
 ```
 
+### Activate the environment
+
+At the bottom of the vscode window, you will see a little box
+```
+Julia env: <ENV NAME>
+```
+Click on this box and navigate to the location of the newly created project (_i.e._, the directory that contains the files `Manifest.toml` and `Project.toml`) and click `OK`.
+
+### Start coding
+
 If we were to write a ___Package___, our code would go under `MyProject.jl/src` and would be included in the module file `MyProject.jl/src/MyProject.jl`. However, here we will only write a small ___Project___, so we'll create a `MyProject.jl/scripts` folder inside which we'll create a file `MyProject.jl/scripts/myscript.jl`.
+
