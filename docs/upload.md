@@ -141,15 +141,20 @@ In this example the data include images (`.tif`) and metadata (`.json`) from mul
 
 
 #### high-res histology annotation
-All datasets used for annotations use the same naming scheme as the rawdata.
-
 All annotation files use the following naming scheme:
-dataset name + _suffix 
-when annotating discrete segmentations, use _dseg as the suffix.
+`<dataset-name> + _desc-[label] + _suffix.ome.zarr`
+where `[label]` is replaced by the annotator's initials and `_suffix` indicates the type of segementations being annoated. Specifically, when annotating discrete segmentations, use `_dseg` as the suffix (see the [BIDS spec on discrete segementations](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#discrete-segmentations)).
 
-When there are multiple annotators working on the same dataset, each annotation file is distinguish by adding a _desc-[label] entity before the suffix, where [label] is replaced by the annotator's initials.
+For example, an annotator with an initial JS annotating discrete segments would name the annotation file as `sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg.ome.zarr`
 
-For example, an annotator with an initial JS would name the annotation file as sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg
+A `<matches>.tsv` file could be included to map the IDs (integer values) of the discrete segmentations to the custome labels, where `<matches>` is replaced by the name of the annotation file. It contains a lookup table with the following columns (see the [BIDS spec on custome TSV](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
+```
+index  name
+1      Single Fiber
+2      Light Bundle
+3      Moderate Bundle
+...
+```
 
 
 
