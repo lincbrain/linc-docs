@@ -145,7 +145,7 @@ All annotation files use the following naming scheme:
 `<dataset-name> + _desc-[label] + _suffix.ome.zarr`
 where `[label]` is replaced by the annotator's initials and `_suffix` indicates the type of segmentations being annotated. Specifically, when annotating discrete segmentations, use `_dseg` as the suffix (see the [BIDS spec on discrete segmentations](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#discrete-segmentations)).
 
-For example, an annotator with an initial JS annotating discrete segments would name the annotation file as `sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg.ome.zarr`
+For example, an annotator with an initial JS annotating discrete segments would name the annotation file as `000003_sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg.ome.zarr`
 
 A `<matches>.tsv` file could be included to map the IDs (integer values) of the discrete segmentations to the custom labels, where `<matches>` is replaced by the name of the annotation file. It contains a lookup table with the following columns (see the [BIDS spec on custom TSV](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
 ```
