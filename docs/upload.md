@@ -139,6 +139,25 @@ This directory contains microscopy data files [as described in detail in the BID
 
 In this example the data include images (`.tif`) and metadata (`.json`) from multiple brain sections. For each section there is a blockface photo (`_photo`) and a histological stain (`_stain`). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (`_BF`), or processed for the fluorescent tracer Lucifer Yellow (`LY`) and imaged under darkfield microscopy (`_DF`). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (`FR`) and imaged under darkfield microscopy (`_DF`).
 
+
+#### high-res histology annotation
+All annotation files use the following naming scheme:
+`<dataset-name> + _desc-[label] + _suffix.ome.zarr`
+where `[label]` is replaced by the annotator's initials and `_suffix` indicates the type of segmentations being annotated. Specifically, when annotating discrete segmentations, use `_dseg` as the suffix (see the [BIDS spec on discrete segmentations](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#discrete-segmentations)).
+
+For example, an annotator with an initial JS annotating discrete segments would name the annotation file as `000003_sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg.ome.zarr`
+
+A `<matches>.tsv` file could be included to map the IDs (integer values) of the discrete segmentations to the custom labels, where `<matches>` is replaced by the name of the annotation file. It contains a lookup table with the following columns (see the [BIDS spec on custom TSV](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
+```
+index  name
+1      Single Fiber
+2      Light Bundle
+3      Moderate Bundle
+...
+```
+
+
+
 ### samples.tsv
 This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file). For Ken1, the `samples.tsv` would look like this:
 
@@ -149,6 +168,7 @@ sub-Ken1 sample-slice0002 tissue
 sub-Ken1 sample-slice0009 tissue
 sub-Ken1 sample-slice0010 tissue
 ```
+
 
 ## Upload your data
 Upload the data from your local machine to lincbrain.org:
