@@ -32,4 +32,4 @@ The following steps provide instructions for adding assets from the LINC Data Pl
 
         ![](img/webknossos_dataset_name.png)
 
-    - For a Webknossos dataset with multiple layers, the naming scheme is currently under discussion here: https://github.com/lincbrain/webknossos/issues/19.
+    - For a Webknossos dataset with multiple layers that are comprised of the histology image and Vaanathi Sundaresan's previously generated annotations, the name will follow the convention for [Webknossos annotations](https://docs.lincbrain.org/upload/#high-res-histology-annotation) and include Vaanathi Sundaresan's initials.
