@@ -183,8 +183,12 @@ Check the output in your terminal for validation errors. If there were no errors
 ## Delete data files or directories
 Individual data files can be deleted on lincbrain.org by clicking on the trashcan icon next to each file. Alternatively, directories or files can be deleted from the command line.
 
-The following example deletes a directory named "horses" on lincbrain.org:
+The following examples delete a directory named "horses" on lincbrain.org:
 
 ```
 dandi delete -i linc /path/to/my/staging/area/101010/rawdata/Ken2/horses
+```
+
+```
+dandi delete -i linc "https://lincbrain.org/dandiset/101010/draft/files?location=rawdata%2Fsub-Ken2%2Fhorses"
 ```
