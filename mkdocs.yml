@@ -27,7 +27,7 @@ nav:
     - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
   - DANDI Docs: https://www.dandiarchive.org/handbook
   - API:
-    - LINC Client: https://lincbrain.readthedocs.io
+    - DANDI Client: https://dandi.readthedocs.io
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
