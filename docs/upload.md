@@ -14,23 +14,23 @@ A dataset refers to a collection of brains that have been processed and imaged i
     1. Browse the existing datasets under the [SHARED DATASETS](https://lincbrain.org/dandiset) tab.
     1. Contact the `Owner` by email requesting that they add you as an `Owner` of the dataset.
 
-## Install the lincbrain command-line interface (CLI)
-On your local machine, install the [lincbrain CLI package](https://pypi.org/project/lincbrain-cli/) in a python environment:
+## Install the dandi command-line interface (CLI)
+On your local machine, install the [dandi CLI package](https://pypi.org/project/dandi/) in a python environment:
 
-`pip install lincbrain-cli`
+`pip install dandi`
 
 ## Copy your lincbrain API key
 Log into lincbrain.org and click on the button with your initials at the top right of the page. Copy your API key and enter it in the following environment variable on your local machine:
 
-`export LINCBRAIN_API_KEY=<EnterYourKeyHere>`
+`export DANDI_API_KEY=<EnterYourKeyHere>`
 
 ## Download your new (empty) dataset locally
-You can find the command that you need to run to download a specific dataset by navigating to the dataset landing page on lincbrain.org, clicking on the `DOWNLOAD` drop-down menu that you'll see at the top right corner of that page, and copying the `lincbrain download ...` command that you see when you click on that menu. 
+You can find the command that you need to run to download a specific dataset by navigating to the dataset landing page on lincbrain.org, clicking on the `DOWNLOAD` drop-down menu that you'll see at the top right corner of that page, and copying the `dandi download ...` command that you see when you click on that menu. 
 
 On your local machine, create a directory that you will use as a staging area for uploading data. Then cd into this directory, and run the download command that you copied above. For example:
 ```
 cd /path/to/my/staging/area
-lincbrain download https://lincbrain.org/dandiset/101010/draft
+dandi download https://lincbrain.org/dandiset/101010/draft
 ```
 
 The above example will create a directory called `/path/to/my/staging/area/101010` with a file called `dandiset.yaml` in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
@@ -175,7 +175,7 @@ Upload the data from your local machine to lincbrain.org:
 
 ```
 cd /path/to/my/staging/area/101010
-lincbrain upload
+dandi upload -i linc
 ```
 
 Check the output in your terminal for validation errors. If there were no errors, your data files should now appear on lincbrain.org.
@@ -183,12 +183,12 @@ Check the output in your terminal for validation errors. If there were no errors
 ## Delete data files or directories
 Individual data files can be deleted on lincbrain.org by clicking on the trashcan icon next to each file. Alternatively, directories or files can be deleted from the command line.
 
-This example deletes a directory named "horses" both on the local machine and on lincbrain.org:
+The following examples delete a directory named "horses" on lincbrain.org:
+
 ```
-lincbrain delete /path/to/my/staging/area/101010/rawdata/Ken2/horses
+dandi delete -i linc /path/to/my/staging/area/101010/rawdata/Ken2/horses
 ```
 
-This example deletes a directory named "horses" on lincbrain.org:
 ```
-lincbrain delete https://lincbrain.org/dandiset/101010/draft/files?location=rawdata%2Fsub-Ken2%2Fhorses
+dandi delete -i linc "https://lincbrain.org/dandiset/101010/draft/files?location=rawdata%2Fsub-Ken2%2Fhorses"
 ```
