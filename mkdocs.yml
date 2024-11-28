@@ -23,6 +23,7 @@ nav:
   - Upload data: "upload.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
+    - Export Webknossos Annotation: "webknossos-export-annotation.md"
     - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
     - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
   - DANDI Docs: https://www.dandiarchive.org/handbook
