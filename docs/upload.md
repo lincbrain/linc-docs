@@ -131,7 +131,9 @@ An example from a (fictional) dataset that includes dMRI and histology data from
 
 The files and subdirectories in this example dataset are described in detail below.
 
-### dataset_description.json
+### Top-level files
+
+#### dataset_description.json
 This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#dataset_descriptionjson). A minimal `dataset_description.json` would look like this:
 
 ```
@@ -141,7 +143,7 @@ This text file is [described in detail in the BIDS specification](https://bids-s
 }
 ```
 
-### participants.tsv
+#### participants.tsv
 This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#participants-file). For this dataset, the `participants.tsv` might look like this:
 
 ```
@@ -150,7 +152,7 @@ sub-Ken1 43 M healthy
 sub-Ken2 61 M hypertension
 ```
 
-### samples.tsv
+#### samples.tsv
 This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file). For this dataset, the `samples.tsv` would look like this:
 
 ```
@@ -171,22 +173,22 @@ sub-Ken2 sample-slice0011 tissue
 
 Label the sample as `brain` if the whole brain was imaged. Label it as `lefthemi` or `righthemi` if a whole hemisphere was imaged.
 
-### rawdata
+### rawdata/
 This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains raw image data files named according to the BIDS specification.
 
 The name every image or data file under `rawdata/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-slice0001_*.json`, etc.
 
-### dwi
+#### dwi/
 This directory contains dMRI data files [as described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetic-resonance-imaging-data.html#diffusion-imaging-data). 
 
 In this example the data include images (`.nii.gz`), b-value tables (`.bval`), gradient tables (`.bvec`), and metadata (`.json`). Data from Ken1 were acquired with a DSI scheme, whereas data from Ken2 were acquired both with a DSI scheme and with a multi-shell, multi-echo scheme.
 
-### micr
+#### micr/
 This directory contains microscopy data files [as described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/microscopy.html).
 
 In this example the data include images (`.tif`) and metadata (`.json`) from multiple brain sections. For each section there is a blockface photo (`_photo`) and a histological stain (`_stain`). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (`_BF`), or processed for the fluorescent tracer Lucifer Yellow (`LY`) and imaged under darkfield microscopy (`_DF`). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (`FR`) and imaged under darkfield microscopy (`_DF`).
 
-### derivatives
+### derivatives/
 This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there are also directories for saving files that can be produced by co-analyzing images of more than one modality, e.g., `xfms/` for transform files or `scenes/` for scene files.
 
 The name every image or data file under `derivatives/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-brain_*.trk`, etc.
