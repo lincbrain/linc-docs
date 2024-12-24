@@ -39,8 +39,8 @@ dandi download https://lincbrain.org/dandiset/101010/draft
 The above example will create a directory called `/path/to/my/staging/area/101010` with a file called `dandiset.yaml` in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
 
 ## Organize your data
-An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below, and can be used as a guide for organizing your own data. A few things to watch out for:
-1. If you are creating a new dataset, you have to create a `dataset_description.json` file.
+An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below. This can be used as a guide for organizing your own dataset. A few things to watch out for:
+1. If you are creating a new dataset, you have to create the `dataset_description.json` file.
 1. If you are adding data from a new subject to an existing dataset, you have to add an entry with the new subject's information to the `participants.tsv` file.
 1. If you are adding data from a new sample (part of the brain) to an existing dataset, you have to add an entry with the new sample's information to the `samples.tsv` file.
 1. Any data files that you add must go under:
@@ -52,15 +52,15 @@ An example from a (fictional) dataset that includes dMRI and histology data from
 101010/
   dataset_description.json
   participants.tsv
+  samples.tsv
   rawdata/
     sub-Ken1/
       dwi/
-        sub-Ken1_acq-DSI_dwi.bval
-        sub-Ken1_acq-DSI_dwi.bvec
-        sub-Ken1_acq-DSI_dwi.json
-        sub-Ken1_acq-DSI_dwi.nii.gz
+        sub-Ken1_sample-brain_acq-DSI_dwi.bval
+        sub-Ken1_sample-brain_acq-DSI_dwi.bvec
+        sub-Ken1_sample-brain_acq-DSI_dwi.json
+        sub-Ken1_sample-brain_acq-DSI_dwi.nii.gz
       micr/
-        samples.tsv
         sub-Ken1_sample-slice0001_photo.json
         sub-Ken1_sample-slice0001_photo.tif
         sub-Ken1_sample-slice0001_stain-Nissl_BF.json
@@ -79,16 +79,15 @@ An example from a (fictional) dataset that includes dMRI and histology data from
         sub-Ken1_sample-slice0010_stain-LY_DF.tif
     sub-Ken2/  
       dwi/
-        sub-Ken2_acq-DSI_dwi.bval
-        sub-Ken2_acq-DSI_dwi.bvec
-        sub-Ken2_acq-DSI_dwi.json
-        sub-Ken2_acq-DSI_dwi.nii.gz
-        sub-Ken2_acq-MulShellMulTE_dwi.bval
-        sub-Ken2_acq-MulShellMulTE_dwi.bvec
-        sub-Ken2_acq-MulShellMulTE_dwi.json
-        sub-Ken2_acq-MulShellMulTE_dwi.nii.gz
+        sub-Ken2_sample-brain_acq-DSI_dwi.bval
+        sub-Ken2_sample-brain_acq-DSI_dwi.bvec
+        sub-Ken2_sample-brain_acq-DSI_dwi.json
+        sub-Ken2_sample-brain_acq-DSI_dwi.nii.gz
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bval
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bvec
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.json
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.nii.gz
       micr/
-        samples.tsv
         sub-Ken2_sample-slice0001_photo.json
         sub-Ken2_sample-slice0001_photo.tif
         sub-Ken2_sample-slice0001_stain-Nissl_BF.json
@@ -136,8 +135,31 @@ sub-Ken1 43 M healthy
 sub-Ken2 61 M hypertension
 ```
 
+### samples.tsv
+This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file). For this dataset, the `samples.tsv` would look like this:
+
+```
+participant_id sample_id sample_type
+sub-Ken1 sample-brain tissue
+sub-Ken1 sample-slice0001 tissue
+sub-Ken1 sample-slice0002 tissue
+sub-Ken1 sample-slice0009 tissue
+sub-Ken1 sample-slice0010 tissue
+sub-Ken2 sample-brain tissue
+sub-Ken2 sample-slice0001 tissue
+sub-Ken2 sample-slice0002 tissue
+sub-Ken2 sample-slice0003 tissue
+sub-Ken2 sample-slice0009 tissue
+sub-Ken2 sample-slice0010 tissue
+sub-Ken2 sample-slice0011 tissue
+```
+
+Label the sample as `brain` if the whole brain was imaged. Label it as `lefthemi` or `righthemi` if a whole hemisphere was imaged.
+
 ### rawdata
-This directory contains one subdirectory for each brain, which contain one subdirectory for each modality, which in turn contain raw image data files named according to the BIDS specification.
+This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains raw image data files named according to the BIDS specification.
+
+The name every image or data file under `rawdata/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-slice0001_*.json`, etc.
 
 ### dwi
 This directory contains dMRI data files [as described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetic-resonance-imaging-data.html#diffusion-imaging-data). 
@@ -165,20 +187,6 @@ index  name
 3      Moderate Bundle
 ...
 ```
-
-
-
-### samples.tsv
-This text file is [described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file). For Ken1, the `samples.tsv` would look like this:
-
-```
-participant_id sample_id sample_type
-sub-Ken1 sample-slice0001 tissue
-sub-Ken1 sample-slice0002 tissue
-sub-Ken1 sample-slice0009 tissue
-sub-Ken1 sample-slice0010 tissue
-```
-
 
 ## Upload your data
 Upload the data from your local machine to lincbrain.org:
