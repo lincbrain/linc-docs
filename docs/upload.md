@@ -178,13 +178,6 @@ cd /path/to/my/staging/area/101010
 dandi upload -i linc
 ```
 
-If you would like to upload non-Zarr files, please use the following command:
-
-```
-cd /path/to/my/staging/area/101010
-DANDI_DEVEL=1 dandi upload -i linc --allow-any-path
-```
-
 Check the output in your terminal for validation errors. If there were no errors, your data files should now appear on lincbrain.org.
 
 ## Delete data files or directories
