@@ -20,6 +20,8 @@ On your local machine, install the [dandi CLI package](https://pypi.org/project/
 
 `pip install dandi`
 
+**Note:** If you are in the MGH LINC team, do not do this step. Instead, ask your labmates how to activate the existing dandi python environment.
+
 ## Copy your lincbrain API key
 Log into lincbrain.org and click on the button with your initials at the top right of the page. Copy your API key and enter it in the following environment variable on your local machine:
 
