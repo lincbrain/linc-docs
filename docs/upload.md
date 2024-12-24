@@ -39,7 +39,14 @@ dandi download https://lincbrain.org/dandiset/101010/draft
 The above example will create a directory called `/path/to/my/staging/area/101010` with a file called `dandiset.yaml` in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
 
 ## Organize your data
-An example of how to organize a dataset that includes dMRI and histology data from two brains is shown below:
+An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below, and can be used as a guide for organizing your own data. A few things to watch out for:
+1. If you are creating a new dataset, you have to create a `dataset_description.json` file.
+1. If you are adding data from a new subject to an existing dataset, you have to add an entry with the new subject's information to the `participants.tsv` file.
+1. If you are adding data from a new sample (part of the brain) to an existing dataset, you have to add an entry with the new sample's information to the `samples.tsv` file.
+1. Any data files that you add must go under:
+   * `rawdata/` if they are raw (unprocessed) data in NIfTI or Zarr format
+   * `sourcedata/` if they are raw (unprocessed) data in other formats
+   * `derivatives/` if they are the outputs of pre-processing or other downstream analyses of the raw data 
 
 ```
 101010/
