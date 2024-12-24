@@ -112,6 +112,21 @@ An example from a (fictional) dataset that includes dMRI and histology data from
         sub-Ken2_sample-slice0011_photo.tif
         sub-Ken2_sample-slice0011_stain-FR_DF.json
         sub-Ken2_sample-slice0011_stain-FR_DF.tif
+  derivatives/
+    sub-Ken1/
+      dwi/
+        ...
+      scenes/
+        ...
+      xfms/
+        ...
+    sub-Ken2/
+      dwi/
+        ...
+      scenes/
+        ...
+      xfms/
+        ...
 ```
 
 The files and subdirectories in this example dataset are described in detail below.
@@ -171,6 +186,10 @@ This directory contains microscopy data files [as described in detail in the BID
 
 In this example the data include images (`.tif`) and metadata (`.json`) from multiple brain sections. For each section there is a blockface photo (`_photo`) and a histological stain (`_stain`). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (`_BF`), or processed for the fluorescent tracer Lucifer Yellow (`LY`) and imaged under darkfield microscopy (`_DF`). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (`FR`) and imaged under darkfield microscopy (`_DF`).
 
+### derivatives
+This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there are also directories for saving files that can be produced by co-analyzing images of more than one modality, e.g., `xfms/` for transform files or `scenes/` for scene files.
+
+The name every image or data file under `derivatives/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-brain_*.trk`, etc.
 
 #### high-res histology annotation
 All annotation files use the following naming scheme:
