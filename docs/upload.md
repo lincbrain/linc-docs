@@ -1,18 +1,19 @@
 # Uploading data to lincbrain.org
 **Note:** The steps below require access to https://lincbrain.org, which is a private repository for LINC project investigators.
 
-## Create a new dataset or contribute to an existing dataset
-A dataset refers to a collection of brains that have been processed and imaged in a similar way. It typically contains data from multiple brains or samples, possibly imaged with multiple modalities.
+## Contribute to an existing dataset or create a new dataset
+Before you create a new dataset, please look over the existing datasets and make sure that there is no dataset appropriate for adding your new images to. Only create a new dataset as a last resort. If your images come from a brain that is already included in an existing dataset, definitely add to the existing dataset, even if the existing images come from a different part of that brain and/or were imaged with a different modality than yours. A dataset refers to a collection of brains that have been processed and imaged for a similar purpose. It typically contains data from multiple brains or samples, possibly imaged with multiple modalities.
 
-1. Create a new dataset
-    1. Log into the [LINC Data Platform](lincbrain.org).
-    1. Click on the `NEW DATASET` button at the top right of the page.
-    1. Fill out the title, description, and license. (The license option exists only because lincbrain.org is a clone of DANDI. It has no effect here, as lincbrain.org is a private repository.)
-    1. Click on the `REGISTER DATASET` button to create the new dataset.
 1. Contribute to an existing dataset
     1. Log into the [LINC Data Platform](lincbrain.org).
     1. Browse the existing datasets under the [SHARED DATASETS](https://lincbrain.org/dandiset) tab.
     1. Contact the `Owner` by email requesting that they add you as an `Owner` of the dataset.
+1. Create a new dataset
+    1. Log into the [LINC Data Platform](lincbrain.org).
+    1. Browse the existing datasets under the [SHARED DATASETS](https://lincbrain.org/dandiset) tab. Make sure that you have followed the guidelines above and there is no existing dataset that your new files can be added to.
+    1. Click on the `NEW DATASET` button at the top right of the page.
+    1. Fill out the title, description, and license. (The license option exists only because lincbrain.org is a clone of DANDI. It has no effect here, as lincbrain.org is a private repository.)
+    1. Click on the `REGISTER DATASET` button to create the new dataset.
 
 ## Install the dandi command-line interface (CLI)
 On your local machine, install the [dandi CLI package](https://pypi.org/project/dandi/) in a python environment:
