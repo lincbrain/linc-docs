@@ -176,12 +176,16 @@ Label the sample as `brain` if the whole brain was imaged. Label it as `lefthemi
 ### rawdata/
 This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains raw image data files named according to the BIDS specification.
 
-The name every image or data file under `rawdata/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-slice0001_*.json`, etc.
+The name of every image or other data file under `rawdata/` must start with a subject and sample label, in that order. Examples: 
+* `sub-Ken1_sample-brain_*.nii.gz`: NIfTI images of the whole brain of subject Ken1
+* `sub-Ken2_sample-slice0001_*.json`: metadata files associated with images of a section of subject Ken2
 
 #### dwi/
 This directory contains dMRI data files [as described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetic-resonance-imaging-data.html#diffusion-imaging-data). 
 
-In this example the data include images (`.nii.gz`), b-value tables (`.bval`), gradient tables (`.bvec`), and metadata (`.json`). Data from Ken1 were acquired with a DSI scheme, whereas data from Ken2 were acquired both with a DSI scheme and with a multi-shell, multi-echo scheme.
+In this example the data include images (`.nii.gz`), b-value tables (`.bval`), gradient tables (`.bvec`), and metadata (`.json`). The name of every image or other data file under `rawdata/dwi/` must contain the subject, sample, and acquisition label, in that order, followed by the `dwi` suffix. Examples:
+* `sub-Ken1_sample-brain_acq-DSI_dwi.nii.gz`: NIfTI volumes of DWIs acquired with a DSI scheme from the whole brain of subject Ken1
+* `sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bval`: b-value table of a scan acquired with a multi-shell, multi-echo scheme, from the whole brain of subject Ken2
 
 #### micr/
 This directory contains microscopy data files [as described in detail in the BIDS specification](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/microscopy.html).
@@ -189,11 +193,13 @@ This directory contains microscopy data files [as described in detail in the BID
 In this example the data include images (`.tif`) and metadata (`.json`) from multiple brain sections. For each section there is a blockface photo (`_photo`) and a histological stain (`_stain`). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (`_BF`), or processed for the fluorescent tracer Lucifer Yellow (`LY`) and imaged under darkfield microscopy (`_DF`). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (`FR`) and imaged under darkfield microscopy (`_DF`).
 
 ### derivatives/
-This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there are also directories for saving files that can be produced by co-analyzing images of more than one modality, e.g., `xfms/` for transform files or `scenes/` for scene files.
+This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there can also be directories for saving files that are typically produced by co-analyzing images of more than one modality, e.g., `xfms/` for transform files or `scenes/` for scene files.
 
-The name every image or data file under `derivatives/` must start with a prefix that contains its subject and sample label, e.g., `sub-Ken1_sample-brain_*.nii.gz`, `sub-Ken2_sample-brain_*.trk`, etc.
+The name of every image or data file under `derivatives/` must start its subject and sample label, in that order. For any files that have been transformed to a space other than the native space, i.e., the one where the images were acquired, this must be followed by a space label. Do not use a space label for files that are in the native space. The name of the file must end with a description label that includes the methodology followed by the name of the derivative. Examples:
+* `sub-Ken1_sample-brain_desc-DTI_FA.nii.gz`: a fractional anisotropy (FA) map derived from a diffusion tensor imaging (DTI) analysis of a whole-brain scan of subject Ken1, in its native (individual DWI) space
+* `sub-Ken2_sample-brain_space-CIT168_desc-CSD_tractography.trk`: a tractogram derived from a constrained spherical deconvolution (CSD) analysis of a whole-brain scan of subject Ken2, transformed to CIT168 template space
 
-#### high-res histology annotation
+#### Special case: high-res histology annotation
 All annotation files use the following naming scheme:
 `<dataset-name> + _desc-[label] + _suffix.ome.zarr`
 where `[label]` is replaced by the annotator's initials and `_suffix` indicates the type of segmentations being annotated. Specifically, when annotating discrete segmentations, use `_dseg` as the suffix (see the [BIDS spec on discrete segmentations](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#discrete-segmentations)).
