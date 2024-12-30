@@ -184,7 +184,7 @@ sub-Ken1 sample-slice0010 tissue
 ```
 
 ## Upload your data
-If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (`/path/to/my/staging/area/101010`).
+If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (i.e. the `/path/to/my/staging/area/101010` in the example above).
 
 Upload the data from your local machine to lincbrain.org:
 
