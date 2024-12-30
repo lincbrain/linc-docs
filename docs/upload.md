@@ -48,9 +48,9 @@ cd /path/to/my/staging/area
 dandi download --preserve-tree dandi://linc/101010@draft/dataset_description.json
 ```
 
-The above example will create a directory called `/path/to/my/staging/area/101010`. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
+The above example will create a directory called `/path/to/my/staging/area/101010`. Any data files that you want to upload to the lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
 
-For more information, on the `--preserve-tree` option please see the [DANDI Handbook](https://www.dandiarchive.org/handbook/12_download/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset).
+For more information on the `--preserve-tree` option please see the [DANDI Handbook](https://www.dandiarchive.org/handbook/12_download/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset).
 
 ## Organize your data
 An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below. This can be used as a guide for organizing your own dataset. A few things to watch out for:
@@ -230,7 +230,7 @@ index  name
 ```
 
 ## Upload your data
-If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (i.e. the `/path/to/my/staging/area/101010` in the example above).
+If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (i.e. the `/path/to/my/staging/area/101010` directory in the example above).
 
 Upload the data from your local machine to lincbrain.org:
 
