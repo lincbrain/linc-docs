@@ -29,7 +29,7 @@ Log into lincbrain.org and click on the button with your initials at the top rig
 ### For a new dataset
 You can find the command that you need to run to download a specific dataset by navigating to the dataset landing page on lincbrain.org, clicking on the `DOWNLOAD` drop-down menu that you'll see at the top right corner of that page, and copying the `dandi download ...` command that you see when you click on that menu. 
 
-On your local machine, create a directory that you will use as a staging area for uploading data. Then cd into this directory, and run the download command that you copied above. For example:
+On your local machine, create a directory that you will use as a staging area for uploading data. Then change into this directory, and run the download command that you copied above. For example:
 ```
 cd /path/to/my/staging/area
 dandi download https://lincbrain.org/dandiset/101010/draft
