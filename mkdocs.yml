@@ -21,6 +21,7 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
     - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
