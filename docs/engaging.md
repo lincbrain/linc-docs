@@ -31,6 +31,9 @@ The Engaging Cluster has head/login nodes to access the cluster and submit jobs 
 1. [Access installed software](https://engaging-web.mit.edu/eofe-wiki/software/load_modules/)
 
 Slurm is a common workload manager so you can also refer to the official [Slurm documentation](https://slurm.schedmd.com/overview.html).
+## Data storage
+
+Data can be stored under the following path: `/orcd/data/linc/`.  We will be working to create an organization strategy for the LINC project data but for now please store your data under a subdirectory (e.g. `/orcd/data/linc/<username>` or `/orcd/data/linc/<projectname>`).  There are additional locations to store your data including the use of scratch space which can be found under the [Storage](https://engaging-web.mit.edu/eofe-wiki/storage/) page.
 
 ## Best practices
 
