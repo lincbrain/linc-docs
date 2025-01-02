@@ -8,7 +8,7 @@ In order to access the Engaging Cluster, you will need a MIT Sponsored Account.
 
 1. Please contact Kabi at kabi@mit.edu with your organization name, date of birth, and phone number.
 2. Once the sponsored account is approved, you will receive an email to complete account registration and establish your MIT Kerberos identity.
-3. Please send your Kerberos ID to Kabi so that he can add you to the WebMoira group (`orcd_ug_pg_linc_all`) so that you can access the Engaging Cluster.
+3. Please send your Kerberos ID to Kabi so that he can add you to the WebMoira groups (`orcd_ug_pg_linc_all` and `orcd_ug_pi_satra_all`) so that you can access the Engaging Cluster.
 
 ## Documentation overview
 
