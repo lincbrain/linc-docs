@@ -27,3 +27,5 @@ Slurm is a common workload manager so you can also refer to the official [Slurm 
 
 1. Please be respectful of these resources as they are used by many groups.
 1. Only run resource intensive scripts on the compute nodes and not on the login/head nodes.
+1. Only run the steps in your script on a GPU compute node if those steps require a GPU.  All other steps should be run on a CPU-only compute node.
+1. Monitor your jobs frequently (`squeue -u <username>`).
