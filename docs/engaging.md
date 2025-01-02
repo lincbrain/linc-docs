@@ -10,6 +10,15 @@ In order to access the Engaging Cluster, you will need a MIT Sponsored Account.
 2. Once the sponsored account is approved, you will receive an email to complete account registration and establish your MIT Kerberos identity.
 3. Please send your Kerberos ID to Kabi so that he can add you to the WebMoira group (`orcd_ug_pg_linc_all`) so that you can access the Engaging Cluster.
 
+## Documentation overview
+
+The MIT Office of Research Computing and Data (ORCD) manage the Engaging Cluster.  Most of the information you will need is in the first link below but there are additional resources:
+
+1. [Engaging Cluster docs](https://engaging-web.mit.edu/eofe-wiki/)
+1. [ORCD Docs](https://orcd-docs.mit.edu/)
+1. [MGHPCC OpenMind GitHub wiki](https://github.mit.edu/MGHPCC/OpenMind/wiki)
+1. [Slurm docs](https://slurm.schedmd.com/overview.html)
+
 ## Access the cluster and run jobs
 
 The Engaging Cluster has head/login nodes to access the cluster and submit jobs to the compute nodes which run your resource intensive scripts.  Job orchestration is performed with the Slurm Workload Manager.  The [Engaging Cluster Documentation](https://engaging-web.mit.edu/eofe-wiki/) provides details on these operations, including:
