@@ -1,4 +1,4 @@
-# Using Neuroglancer to Visualize Structure Tensors in Zarr Format
+# Using Neuroglancer to Visualize Orientation Vector in Zarr Format
 
 ## 1. Ensure the vector dimension is in a single chunk
 
@@ -8,10 +8,14 @@ Neuroglancer requires that the dimension along the channels (where your vector d
 
 Once you have your data chunked correctly, you can load the Zarr dataset into Neuroglancer. Typically, you will:
 
-1. Start Neuroglancer (either locally or on a server).
+## 2.1 Start Local Neuroglancer Server
+1. Start Neuroglancer.
 2. Open Neuroglancer in a browser.
 3. Load Zarr if it presents locally  `load zarr:///example.path.zarr`
 
+## 2.2 Start Neuroglancer on lincbrain
+1. Find the dataset you want to visualize
+2. Under `Open With` button, select Neuroglancer
 
 ## 3. Rename the channel dimension from `c'` to `c^`
 
@@ -68,3 +72,10 @@ void main() {
 ```
 
 In Neuroglancer, you can paste this shader code in the layer’s Shader Editor (usually found under the “Layer” panel).
+
+
+## 5. Example
+
+An example dataset can be found at [here](https://lincbrain.org/dandiset/000010/draft/files?location=sourcedata%2Fderivatives&page=2). The file `sample18_st_filtered.ome.zarr`. Once we change the dimension name to `c^` and apply the shader. We can see the result as following.
+ ![](img/neuroglancer_orientation_vector_example.jpeg)
+
