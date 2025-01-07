@@ -31,4 +31,4 @@ For questions, bug reports, and feature requests, please:
 
 - File an issue on the relevant [GitHub repository](https://github.com/lincbrain)
 - Reach out on the [LINC Slack](https://mit-lincbrain.slack.com/)
-- Send an email to kabi@mit.edu
+- Send an email to lincbrain@mit.edu
