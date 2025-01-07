@@ -4,7 +4,7 @@
 
 Ensure the repository is cloned and its dependencies are installed.
 
-Steps to Calculate Structure Tensor
+## Steps to Calculate Structure Tensor
 
 1. Run Structure Tensor Calculation
 
