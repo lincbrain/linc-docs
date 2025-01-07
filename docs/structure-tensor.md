@@ -1,4 +1,4 @@
-# Calculating Structure Tensor
+# Calculate Structure Tensors
 
 ## Prerequisites
 
