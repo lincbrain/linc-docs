@@ -28,15 +28,29 @@ Log into lincbrain.org and click on the button with your initials at the top rig
 `export DANDI_API_KEY=<EnterYourKeyHere>`
 
 ## Download your new (empty) dataset locally
+
+### For a new dataset
 You can find the command that you need to run to download a specific dataset by navigating to the dataset landing page on lincbrain.org, clicking on the `DOWNLOAD` drop-down menu that you'll see at the top right corner of that page, and copying the `dandi download ...` command that you see when you click on that menu. 
 
-On your local machine, create a directory that you will use as a staging area for uploading data. Then cd into this directory, and run the download command that you copied above. For example:
+On your local machine, create a directory that you will use as a staging area for uploading data. Then change into this directory, and run the download command that you copied above. For example:
 ```
 cd /path/to/my/staging/area
 dandi download https://lincbrain.org/dandiset/101010/draft
 ```
 
 The above example will create a directory called `/path/to/my/staging/area/101010` with a file called `dandiset.yaml` in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
+
+### For an existing dataset
+For an existing dataset you will probably not want to download the entire dataset from lincbrain.org which can be many terabyes in size.  Using the command below, you can download the dataset with just the `dandiset.yaml` and `dataset_description.json` files.  You will need to replace `101010` with your `dandiset-id`.
+
+```
+cd /path/to/my/staging/area
+dandi download --preserve-tree dandi://linc/101010@draft/dataset_description.json
+```
+
+The above example will create a directory called `/path/to/my/staging/area/101010`. Any data files that you want to upload to the lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
+
+For more information on the `--preserve-tree` option please see the [DANDI Handbook](https://www.dandiarchive.org/handbook/12_download/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset).
 
 ## Organize your data
 An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below. This can be used as a guide for organizing your own dataset. A few things to watch out for:
@@ -216,6 +230,8 @@ index  name
 ```
 
 ## Upload your data
+If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (i.e. the `/path/to/my/staging/area/101010` directory in the example above).
+
 Upload the data from your local machine to lincbrain.org:
 
 ```
