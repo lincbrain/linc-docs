@@ -22,6 +22,7 @@ nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
   - Visualize data in Neuroglancer: "neuroglancer.md"
+  - Calculating Structure Tensor: "structure-tensor.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
     - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
