@@ -12,8 +12,18 @@ theme:
   favicon: img/linc.logo.color+white.notext+square.png
   logo: img/linc.logo.color+black.alpha.notext.png
   palette:
-    primary: "deep purple"
-    accent: "purple"
+    - scheme: default
+      toggle: 
+        icon: material/weather-night
+        name: Dark mode
+      primary: "deep purple"
+      accent: "purple"
+    - scheme: slate
+      toggle: 
+        icon: material/weather-sunny
+        name: Light mode
+      primary: "deep purple"
+      accent: "purple"
   features:
     - toc.integrate
 
@@ -21,8 +31,15 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Visualize data in Neuroglancer: "neuroglancer.md"
+  - Webknossos:
+    - Add Webknossos dataset: "webknossos-add-dataset.md"
+    - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
+    - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
+  - Engaging Cluster: "engaging.md"
+  - DANDI Docs: https://docs.dandiarchive.org
   - API:
-    - LINC Client: https://lincbrain.readthedocs.io
+    - DANDI Client: https://dandi.readthedocs.io
   - Data:
     - HiP-CT: "data/hipct.md"
   - Contribute documentation: "contribute.md"
