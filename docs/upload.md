@@ -232,6 +232,14 @@ index  name
 ## Upload your data
 If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the `dandiset.yaml` and `dataset_description.json` files in your local directory (i.e. the `/path/to/my/staging/area/101010` directory in the example above).
 
+!!! tip
+	If you do not have the `dandiset.yaml` file, run:
+	
+	```
+	cd /path/to/my/staging/area/101010
+	dandi downdload dandi://linc/101010/dandiset.yaml
+	```
+
 Upload the data from your local machine to lincbrain.org:
 
 ```
@@ -240,6 +248,15 @@ dandi upload -i linc
 ```
 
 Check the output in your terminal for validation errors. If there were no errors, your data files should now appear on lincbrain.org.
+
+!!! tip
+	If you need to upload data formats that are not BIDS-compliant 
+ 	(_i.e._, other than `.nii.gz`, `.json`, `.zarr`), run the `upload` command in 
+  	development mode, with the `--allow-any-path` option:
+	
+	```
+	DANDI_DEVEL=1 dandi upload -i linc --allow-any-path
+	```
 
 ## Delete data files or directories
 Individual data files can be deleted on lincbrain.org by clicking on the trashcan icon next to each file. Alternatively, directories or files can be deleted from the command line.
