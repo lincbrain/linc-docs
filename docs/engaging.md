@@ -19,6 +19,10 @@ The MIT Office of Research Computing and Data (ORCD) manage the Engaging Cluster
 1. [MGHPCC OpenMind GitHub wiki](https://github.mit.edu/MGHPCC/OpenMind/wiki)
 1. [Slurm docs](https://slurm.schedmd.com/overview.html)
 
+## Email updates
+
+The ORCD team will regularly send out updates about the Engaging Cluster to your MIT email address, which can be accessed at https://outlook.office.com.
+
 ## Access the cluster and run jobs
 
 The Engaging Cluster has head/login nodes to access the cluster and submit jobs to the compute nodes which run your resource intensive scripts.  Job orchestration is performed with the Slurm Workload Manager.  The [Engaging Cluster Documentation](https://engaging-web.mit.edu/eofe-wiki/) provides details on these operations, including:
