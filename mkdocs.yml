@@ -37,6 +37,8 @@ nav:
     - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
     - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
   - Engaging Cluster: "engaging.md"
+  - Design Docs:
+    - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
   - DANDI Docs: https://docs.dandiarchive.org
   - API:
     - DANDI Client: https://dandi.readthedocs.io
