@@ -200,7 +200,7 @@ There are three different components that must be taken into account for a WebKN
 
 • mounted Docker volumes -- represented by the `binaryData` and `persistent` directories in the WebKNOSSOS file structure
   - exported to AWS S3 via the `docker_volumes_backup.sh` cronjob script
-• FossilDB data (manged via `fossildb-client restore` commands)
+• FossilDB data (managed via `fossildb-client restore` commands)
   - exported to AWS S3 via the `fossil_db_backup.sh` cronjob script
 • PostgresDB data (managed via `pg_dump` and `pg_restore` commands)
   - exported to AWS S3 via the `postgres_backup.sh` cronjob script
