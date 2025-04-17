@@ -10,7 +10,7 @@ In order to access the Engaging Cluster, you will need a MIT Sponsored Account.
 2. Once the sponsored account is approved, you will receive an email to complete account registration and establish your MIT Kerberos identity.
 3. Please send your Kerberos ID to Kabi so that he can add you to the WebMoira group (`orcd_ug_pg_linc_all`) so that you can access the Engaging Cluster.
 4. Sign up for two-factor authentication with Duo at https://duo.mit.edu.  You will need to download the Duo Mobile app and register your phone with the QR code that is displayed at https://duo.mit.edu.
-5. To access the Engaging cluster for the first time, you will need to log in via Engaging Open OnDemand Portal.  For instructions, see [here](https://engaging-web.mit.edu/eofe-wiki/logging_in/engaging-ood/).
+5. To access the Engaging cluster for the first time, you will need to log in via the Engaging Open OnDemand Portal.  For instructions, see [here](https://engaging-web.mit.edu/eofe-wiki/logging_in/engaging-ood/).
 
 ## Documentation overview
 
