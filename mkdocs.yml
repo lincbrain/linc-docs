@@ -12,8 +12,18 @@ theme:
   favicon: img/linc.logo.color+white.notext+square.png
   logo: img/linc.logo.color+black.alpha.notext.png
   palette:
-    primary: "deep purple"
-    accent: "purple"
+    - scheme: default
+      toggle: 
+        icon: material/weather-night
+        name: Dark mode
+      primary: "deep purple"
+      accent: "purple"
+    - scheme: slate
+      toggle: 
+        icon: material/weather-sunny
+        name: Light mode
+      primary: "deep purple"
+      accent: "purple"
   features:
     - toc.integrate
 
@@ -21,14 +31,20 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
     - Export Webknossos Annotation: "webknossos-export-annotation.md"
     - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
     - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
-  - DANDI Docs: https://www.dandiarchive.org/handbook
+  - Engaging Cluster: "engaging.md"
+  - Design Docs:
+    - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
+  - DANDI Docs: https://docs.dandiarchive.org
   - API:
-    - LINC Client: https://lincbrain.readthedocs.io
+    - DANDI Client: https://dandi.readthedocs.io
+  - Data:
+    - HiP-CT: "data/hipct.md"
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
@@ -40,6 +56,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - toc:
       permalink: True
+  - pymdownx.arithmatex:
+      generic: true
 
 # List of plugins
 plugins:
@@ -68,3 +86,7 @@ extra:
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/lincbrain-cli
       name: PyPI
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
