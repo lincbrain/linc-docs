@@ -34,8 +34,8 @@ nav:
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
-    - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
-    - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
+    - Deployment: "webknossos-deployment.md"
+    - Development: "webknossos-development.md"
   - Engaging Cluster: "engaging.md"
   - Design Docs:
     - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
