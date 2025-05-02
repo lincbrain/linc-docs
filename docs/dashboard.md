@@ -15,6 +15,6 @@ Excluded from the dashboard are datasets `000048` (OpenBNB) and `000004` (Mouse 
 
 Follow the instructions below to run the application locally:
 1. Fork and clone the [linc-dashboard](https://github.com/lincbrain/linc-dashboard) repository.
-2. Install the `requirements.txt`.
+2. Install the dependencies using `pip install -r requirements.txt`.
 3. Run the application with `streamlit run app.py`.
 4. Run the script to extract metadata with `python extract_metadata.py`.  Note, by default the application displays the data from S3.
