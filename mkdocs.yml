@@ -31,6 +31,7 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Dashboard: "dashboard.md"
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
