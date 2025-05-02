@@ -1,6 +1,8 @@
 # LINC Dashboard
 
-The [LINC Dashboard](https://dashboard.lincbrain.org) summarizes all data on [lincbrain.org](https://lincbrain.org).
+The [LINC Dashboard](https://dashboard.lincbrain.org) summarizes the data on [lincbrain.org](https://lincbrain.org).
+
+Excluded from the dashboard are datasets `000048` (OpenBNB) and `000004` (Mouse LSM) since they were not acquired as part of LINC milestones.
 
 ## Developer documentation
 
