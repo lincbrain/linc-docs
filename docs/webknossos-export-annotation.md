@@ -2,8 +2,7 @@
 
 The following steps provide instructions for downloading annotations from webknossos. 
 
-1. Go to Annotations tab and click open on target annotation
-
+1. Go to the `Annotations` tab and click `Open` for a desired annotation.
 
     ![](img/webknossos_annotation.png)
 
