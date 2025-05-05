@@ -8,7 +8,7 @@ The following steps provide instructions for downloading annotations from webkno
 
 2. Click `Download` in the dropdown `Menu`.
 
-    ![](img/download.png)
+    ![](img/webknossos_download.png)
 
 3. Select "Include volume annotations as WKW" on pop out box and click on Download
 
