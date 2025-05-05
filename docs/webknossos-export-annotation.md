@@ -14,7 +14,7 @@ The following steps provide instructions for downloading annotations from webkno
 
     ![](img/webknossos_download_options.png)
 
-4. Unzip downloaded annotation file 
+4. Unzip the downloaded annotation file.
 
 5. Unzip data_Volume.zip under annotation folder 
 
