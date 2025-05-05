@@ -21,6 +21,6 @@ The following steps provide instructions for downloading annotations from webkno
 
     ![](img/data_volume.png)
 
-6. Run Script webknossos_annotation.py to save into ome.zarr format following czyx direction. 
+6. Run the [webknossos_annotation.py](https://github.com/lincbrain/linc-convert/blob/main/linc_convert/modalities/wk/webknossos_annotation.py) script to save into the OME-Zarr format following the `czyx` direction. 
 
    
