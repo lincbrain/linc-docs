@@ -7,7 +7,7 @@ The following steps provide instructions for downloading annotations from webkno
 
     ![](img/webknossos_annotation.png)
 
-2. Click on Download on dropdown menu
+2. Click `Download` in the dropdown `Menu`.
 
     ![](img/download.png)
 
