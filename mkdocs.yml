@@ -31,12 +31,13 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Dashboard: "dashboard.md"
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
-    - Export Webknossos Annotation: "webknossos-export-annotation.md"
-    - Deployment: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEPLOYMENT.md
-    - Development: https://github.com/lincbrain/webknossos/blob/ak-dev/LINC_DEVELOPMENT.md
+    - Export Webknossos annotation: "webknossos-export-annotation.md"
+    - Deployment: "webknossos-deployment.md"
+    - Development: "webknossos-development.md"
   - Engaging Cluster: "engaging.md"
   - Design Docs:
     - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
@@ -58,6 +59,11 @@ markdown_extensions:
       permalink: True
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 # List of plugins
 plugins:
