@@ -31,9 +31,11 @@ theme:
 nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
+  - Dashboard: "dashboard.md"
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
+    - Export Webknossos annotation: "webknossos-export-annotation.md"
     - Deployment: "webknossos-deployment.md"
     - Development: "webknossos-development.md"
   - Engaging Cluster: "engaging.md"
@@ -90,7 +92,6 @@ extra:
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/lincbrain-cli
       name: PyPI
-
 
 extra_javascript:
   - javascripts/mathjax.js
