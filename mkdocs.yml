@@ -46,6 +46,7 @@ nav:
     - DANDI Client: https://dandi.readthedocs.io
   - Data:
     - HiP-CT: "data/hipct.md"
+  - Health status: https://status.lincbrain.org
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
 
