@@ -32,6 +32,7 @@ nav:
   - Welcome: "index.md"
   - Upload data: "upload.md"
   - Dashboard: "dashboard.md"
+  - LINC Convert: https://convert.lincbrain.org
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
