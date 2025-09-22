@@ -41,13 +41,12 @@ nav:
     - Development: "webknossos-development.md"
   - Engaging Cluster: "engaging.md"
   - JupyterHub: "jupyterhub.md"
-  - Design Docs:
-    - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
   - DANDI Docs: https://docs.dandiarchive.org
-  - API:
-    - DANDI Client: https://dandi.readthedocs.io
+  - DANDI Client: https://dandi.readthedocs.io
   - Data:
     - HiP-CT: "data/hipct.md"
+  - Design Docs:
+    - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
   - Health status: https://status.lincbrain.org
   - Contribute documentation: "contribute.md"
   - About this doc: "about.md"
