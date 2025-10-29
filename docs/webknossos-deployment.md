@@ -6,12 +6,11 @@ This document is designed to help deploy a new version of WEBKNOSSOS via AWS EC2
 
 ### Create an instance in AWS EC2 with at least 32GB of memory
 
-Proceed to AWS and create an AWS Linux instance
-
-• r5.2xlarge is suggested for instance type
-• x86_64 architecture is suggested
-• Ensure that ports 80 and 443 are available.
-• Ensure that the instance is reachable via Public IP address
+- Proceed to AWS and create an AWS Linux instance
+- r5.2xlarge is suggested for instance type
+- x86_64 architecture is suggested
+- Ensure that ports 80 and 443 are available.
+- Ensure that the instance is reachable via Public IP address
 
 ### Connect the instance to a Route 53 Domain Record
 
