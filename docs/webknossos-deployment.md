@@ -1,6 +1,8 @@
-# LINC | WebKNOSSOS Deployment
+# WEBKNOSSOS Deployment
 
-This document is designed to help deploy a new version for LINC | WebKNOSSOS via AWS EC2
+This document is designed to help deploy a new version of WEBKNOSSOS via AWS EC2.
+
+## Create a new deployment
 
 ### Create an instance in AWS EC2 with at least 32GB of memory
 
@@ -19,7 +21,7 @@ Proceed to Route 53 and create an A Record with the desired domain that is point
 
 Once the instance is running, SSH onto the instance. 
 
-First, install the appropriate dependencies -- you'll need docker, docker-compose (and most likely git and vim for file management)
+First, install the appropriate dependencies (i.e. docker, docker-compose, git, vim).
 
 ```shell
 sudo yum install docker git vim -y
@@ -48,7 +50,7 @@ sudo chown -R 1000:1000 binaryData
 sudo touch nginx.conf
 ```
 
-Next, you'll need to issue an SSL certificate directly on the server -- `certbot` is used here:
+Next, you'll need to issue an SSL certificate directly on the server. `certbot` is used here.
 
 ```shell
 sudo docker run --rm -p 80:80 -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/certs-data:/data/letsencrypt certbot/certbot certonly --standalone -d <enter-your-website-url> --email admin@lincbrain.org --agree-tos --non-interactive
@@ -194,11 +196,11 @@ Temp steps / commands for FossilDB backup:
 4. `docker run --network <network-id> scalableminds/fossildb-client:master webknossos-fossildb-1 backup` should create the backup
 5. The backup will be stored via `/home/ec2-user/opt/webknossos/persistent/fossildb/backup`
 
-## Creating a new WebKNOSSOS with pre-existing backups
+## Create a new WEBKNOSSOS with pre-existing backups
 
-There are three different components that must be taken into account for a WebKNOSSOS clone:
+There are three different components that must be taken into account for a WEBKNOSSOS clone:
 
-• mounted Docker volumes -- represented by the `binaryData` and `persistent` directories in the WebKNOSSOS file structure
+• mounted Docker volumes -- represented by the `binaryData` and `persistent` directories in the WEBKNOSSOS file structure
   - exported to AWS S3 via the `docker_volumes_backup.sh` cronjob script
 • FossilDB data (managed via `fossildb-client restore` commands)
   - exported to AWS S3 via the `fossil_db_backup.sh` cronjob script
@@ -222,7 +224,7 @@ you are ready to proceed; however, ensure that `persistent` and `binaryData` fol
 
 Next, you want to restore the `fossildb` instance -- this can simply be done via the `docker-compose run fossil-db-restore` command
 
-Almost there! You'll next want to bring up the remainder of the WebKNOSSOS API (along with the nginx-proxy, postgres, etc.) via `docker-compose --env-file env.txt webknossos nginx-proxy`
+Almost there! You'll next want to bring up the remainder of the WEBKNOSSOS API (along with the nginx-proxy, postgres, etc.) via `docker-compose --env-file env.txt webknossos nginx-proxy`
 
 Notably, this will bring up the `postgres` container (however, we've yet to restore the container!). Thus you'll want to:
   - Mount the decompressed, unpacked backup (should be something like `<backup_timestamp>.sql`). The mount command should be something similar to: `docker cp /local/path/to/postgres_backup.sql <container_id>:/tmp/postgres_backup.sql`
@@ -233,9 +235,21 @@ Notably, this will bring up the `postgres` container (however, we've yet to rest
 
 Your clone should be all set now!
 
+## Renew SSL certificate
 
+Note that if you are renewing the certificate, the application cannot be running so proceed with the following steps:
 
-
-
-
+1. Notify users
+2. Stop the application
+  ```shell
+  sudo docker-compose down
+  ```
+3. Obtain the SSL certificate
+  ```shell
+  sudo docker run --rm -p 80:80 -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/certs-data:/data/letsencrypt certbot/certbot certonly --standalone -d webknossos.lincbrain.org --email admin@lincbrain.org --agree-tos --non-interactive
+  ```
+4. Restart the application
+  ```shell
+  sudo /usr/local/bin/docker-compose --env-file env.txt up -d webknossos nginx-proxy
+  ```
 
