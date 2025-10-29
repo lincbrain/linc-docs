@@ -246,7 +246,7 @@ Note that if you are renewing the certificate, the application cannot be running
   ```
 3. Obtain the SSL certificate
   ```shell
-  sudo docker run --rm -p 80:80 -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/certs-data:/data/letsencrypt certbot/certbot certonly --standalone -d <enter-your-website-url> --email admin@lincbrain.org --agree-tos --non-interactive
+  sudo docker run --rm -p 80:80 -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/certs-data:/data/letsencrypt certbot/certbot certonly --standalone -d webknossos.lincbrain.org --email admin@lincbrain.org --agree-tos --non-interactive
   ```
 4. Restart the application
   ```shell
