@@ -41,7 +41,7 @@ dandi download https://lincbrain.org/dandiset/101010/draft
 The above example will create a directory called `/path/to/my/staging/area/101010` with a file called `dandiset.yaml` in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
 
 ### For an existing dataset
-For an existing dataset you will probably not want to download the entire dataset from lincbrain.org which can be many terabyes in size.  Using the command below, you can download the dataset with just the `dandiset.yaml` and `dataset_description.json` files.  You will need to replace `101010` with your `dandiset-id`.
+For an existing dataset you will probably not want to download the entire dataset from lincbrain.org which can be many terabytes in size.  Using the command below, you can download the dataset with just the `dandiset.yaml` and `dataset_description.json` files.  You will need to replace `101010` with your `dandiset-id`.
 
 ```
 cd /path/to/my/staging/area
