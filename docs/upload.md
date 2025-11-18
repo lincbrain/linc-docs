@@ -50,7 +50,7 @@ dandi download --preserve-tree dandi://linc/101010@draft/dataset_description.jso
 
 The above example will create a directory called `/path/to/my/staging/area/101010`. Any data files that you want to upload to the lincbrain.org dataset have to first be saved here, and organized according to the [Brain Imaging Data Structure (BIDS)](https://bids-specification.readthedocs.io/).
 
-For more information on the `--preserve-tree` option please see the [DANDI Docs](https://docs.dandiarchive.org/12_download/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset).
+For more information on the `--preserve-tree` option please see the [DANDI Docs](https://docs.dandiarchive.org/user-guide-using/accessing-data/downloading/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset).
 
 ## Organize your data
 An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below. This can be used as a guide for organizing your own dataset. A few things to watch out for:
