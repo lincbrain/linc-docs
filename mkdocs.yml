@@ -91,9 +91,6 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/lincbrain
       name: Docker Hub
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/lincbrain-cli
-      name: PyPI
 
 extra_javascript:
   - javascripts/mathjax.js
