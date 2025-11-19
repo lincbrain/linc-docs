@@ -1,0 +1,1303 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.lincbrain.org/upload/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../dashboard/">
+      
+      
+      <link rel="icon" href="../img/linc.logo.color+white.notext+square.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Upload data - LINC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-E0ERHE0JXE"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-E0ERHE0JXE",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-E0ERHE0JXE",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uploading-data-to-lincbrainorg" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LINC Documentation" class="md-header__button md-logo" aria-label="LINC Documentation" data-md-component="logo">
+      
+  <img src="../img/linc.logo.color+black.alpha.notext.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LINC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upload data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lincbrain/linc-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/linc-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LINC Documentation" class="md-nav__button md-logo" aria-label="LINC Documentation" data-md-component="logo">
+      
+  <img src="../img/linc.logo.color+black.alpha.notext.png" alt="logo">
+
+    </a>
+    LINC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lincbrain/linc-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/linc-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Upload data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Upload data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contribute-to-an-existing-dataset-or-create-a-new-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribute to an existing dataset or create a new dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-dandi-command-line-interface-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the dandi command-line interface (CLI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-your-lincbrain-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy your lincbrain API key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-your-new-empty-dataset-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download your new (empty) dataset locally
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download your new (empty) dataset locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-new-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      For a new dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-an-existing-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      For an existing dataset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organize-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize your data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organize your data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-level-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top-level files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Top-level files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset_descriptionjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      dataset_description.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#participantstsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      participants.tsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samplestsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      samples.tsv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rawdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      rawdata/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rawdata/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dwi" class="md-nav__link">
+    <span class="md-ellipsis">
+      dwi/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micr" class="md-nav__link">
+    <span class="md-ellipsis">
+      micr/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      derivatives/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivatives/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-case-high-res-histology-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special case: high-res histology annotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload your data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-data-files-or-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete data files or directories
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://convert.lincbrain.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LINC Convert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neuroglancer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualize data in Neuroglancer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webknossos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Webknossos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webknossos-add-dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add Webknossos dataset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webknossos-export-annotation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Webknossos annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webknossos-deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webknossos-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engaging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engaging Cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyterhub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JupyterHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.dandiarchive.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DANDI Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dandi.readthedocs.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DANDI Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/hipct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HiP-CT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Design Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neuroglancer-private-assets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualize private S3 assets with Neuroglancer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://status.lincbrain.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Health status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About this doc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="uploading-data-to-lincbrainorg">Uploading data to lincbrain.org<a class="headerlink" href="#uploading-data-to-lincbrainorg" title="Permanent link">&para;</a></h1>
+<p><strong>Note:</strong> The steps below require access to <a href="https://lincbrain.org">https://lincbrain.org</a>, which is a private repository for LINC project investigators.</p>
+<h2 id="contribute-to-an-existing-dataset-or-create-a-new-dataset">Contribute to an existing dataset or create a new dataset<a class="headerlink" href="#contribute-to-an-existing-dataset-or-create-a-new-dataset" title="Permanent link">&para;</a></h2>
+<p>Before you create a new dataset, please look over the existing datasets and make sure that there is no dataset appropriate for adding your new images to. Only create a new dataset as a last resort. If your images come from a brain that is already included in an existing dataset, definitely add to the existing dataset, even if the existing images come from a different part of that brain and/or were imaged with a different modality than yours. A dataset refers to a collection of brains that have been processed and imaged for a similar purpose. It typically contains data from multiple brains or samples, possibly imaged with multiple modalities.</p>
+<ol>
+<li>Contribute to an existing dataset<ol>
+<li>Log into the <a href="lincbrain.org">LINC Data Platform</a>.</li>
+<li>Browse the existing datasets under the <a href="https://lincbrain.org/dandiset">SHARED DATASETS</a> tab.</li>
+<li>Contact the <code>Owner</code> by email requesting that they add you as an <code>Owner</code> of the dataset.</li>
+</ol>
+</li>
+<li>Create a new dataset<ol>
+<li>Log into the <a href="lincbrain.org">LINC Data Platform</a>.</li>
+<li>Browse the existing datasets under the <a href="https://lincbrain.org/dandiset">SHARED DATASETS</a> tab. Make sure that you have followed the guidelines above and there is no existing dataset that your new files can be added to.</li>
+<li>Click on the <code>NEW DATASET</code> button at the top right of the page.</li>
+<li>Fill out the title, description, and license. (The license option exists only because lincbrain.org is a clone of DANDI. It has no effect here, as lincbrain.org is a private repository.)</li>
+<li>Click on the <code>REGISTER DATASET</code> button to create the new dataset.</li>
+</ol>
+</li>
+</ol>
+<h2 id="install-the-dandi-command-line-interface-cli">Install the dandi command-line interface (CLI)<a class="headerlink" href="#install-the-dandi-command-line-interface-cli" title="Permanent link">&para;</a></h2>
+<p>On your local machine, install the <a href="https://pypi.org/project/dandi/">dandi CLI package</a> in a python environment:</p>
+<p><code>pip install dandi</code></p>
+<p><strong>Note:</strong> If you are in the MGH LINC team, do not do this step. Instead, ask your labmates how to activate the existing dandi python environment.</p>
+<h2 id="copy-your-lincbrain-api-key">Copy your lincbrain API key<a class="headerlink" href="#copy-your-lincbrain-api-key" title="Permanent link">&para;</a></h2>
+<p>Log into lincbrain.org and click on the button with your initials at the top right of the page. Copy your API key and enter it in the following environment variable on your local machine:</p>
+<p><code>export DANDI_API_KEY=&lt;EnterYourKeyHere&gt;</code></p>
+<h2 id="download-your-new-empty-dataset-locally">Download your new (empty) dataset locally<a class="headerlink" href="#download-your-new-empty-dataset-locally" title="Permanent link">&para;</a></h2>
+<h3 id="for-a-new-dataset">For a new dataset<a class="headerlink" href="#for-a-new-dataset" title="Permanent link">&para;</a></h3>
+<p>You can find the command that you need to run to download a specific dataset by navigating to the dataset landing page on lincbrain.org, clicking on the <code>DOWNLOAD</code> drop-down menu that you'll see at the top right corner of that page, and copying the <code>dandi download ...</code> command that you see when you click on that menu. </p>
+<p>On your local machine, create a directory that you will use as a staging area for uploading data. Then change into this directory, and run the download command that you copied above. For example:
+<div class="highlight"><pre><span></span><code>cd /path/to/my/staging/area
+dandi download https://lincbrain.org/dandiset/101010/draft
+</code></pre></div></p>
+<p>The above example will create a directory called <code>/path/to/my/staging/area/101010</code> with a file called <code>dandiset.yaml</code> in it. Any data files that you want to upload to your new lincbrain.org dataset have to first be saved here, and organized according to the <a href="https://bids-specification.readthedocs.io/">Brain Imaging Data Structure (BIDS)</a>.</p>
+<h3 id="for-an-existing-dataset">For an existing dataset<a class="headerlink" href="#for-an-existing-dataset" title="Permanent link">&para;</a></h3>
+<p>For an existing dataset you will probably not want to download the entire dataset from lincbrain.org which can be many terabytes in size.  Using the command below, you can download the dataset with just the <code>dandiset.yaml</code> and <code>dataset_description.json</code> files.  You will need to replace <code>101010</code> with your <code>dandiset-id</code>.</p>
+<div class="highlight"><pre><span></span><code>cd /path/to/my/staging/area
+dandi download --preserve-tree dandi://linc/101010@draft/dataset_description.json
+</code></pre></div>
+<p>The above example will create a directory called <code>/path/to/my/staging/area/101010</code>. Any data files that you want to upload to the lincbrain.org dataset have to first be saved here, and organized according to the <a href="https://bids-specification.readthedocs.io/">Brain Imaging Data Structure (BIDS)</a>.</p>
+<p>For more information on the <code>--preserve-tree</code> option please see the <a href="https://docs.dandiarchive.org/user-guide-using/accessing-data/downloading/#download-the-dandisetyaml-file-and-a-specific-file-within-the-directory-tree-of-the-dandiset">DANDI Docs</a>.</p>
+<h2 id="organize-your-data">Organize your data<a class="headerlink" href="#organize-your-data" title="Permanent link">&para;</a></h2>
+<p>An example from a (fictional) dataset that includes dMRI and histology data from two brains is shown below. This can be used as a guide for organizing your own dataset. A few things to watch out for:
+1. If you are creating a new dataset, you have to create the <code>dataset_description.json</code> file.
+1. If you are adding data from a new subject to an existing dataset, you have to add an entry with the new subject's information to the <code>participants.tsv</code> file.
+1. If you are adding data from a new sample (part of the brain) to an existing dataset, you have to add an entry with the new sample's information to the <code>samples.tsv</code> file.
+1. Any data files that you add must go under:
+   * <code>rawdata/</code> if they are raw (unprocessed) data in NIfTI or Zarr format
+   * <code>sourcedata/</code> if they are raw (unprocessed) data in other formats
+   * <code>derivatives/</code> if they are the outputs of pre-processing or other downstream analyses of the raw data </p>
+<div class="highlight"><pre><span></span><code>101010/
+  dataset_description.json
+  participants.tsv
+  samples.tsv
+  rawdata/
+    sub-Ken1/
+      dwi/
+        sub-Ken1_sample-brain_acq-DSI_dwi.bval
+        sub-Ken1_sample-brain_acq-DSI_dwi.bvec
+        sub-Ken1_sample-brain_acq-DSI_dwi.json
+        sub-Ken1_sample-brain_acq-DSI_dwi.nii.gz
+      micr/
+        sub-Ken1_sample-slice0001_photo.json
+        sub-Ken1_sample-slice0001_photo.tif
+        sub-Ken1_sample-slice0001_stain-Nissl_BF.json
+        sub-Ken1_sample-slice0001_stain-Nissl_BF.tif
+        sub-Ken1_sample-slice0002_photo.json
+        sub-Ken1_sample-slice0002_photo.tif
+        sub-Ken1_sample-slice0002_stain-LY_DF.json
+        sub-Ken1_sample-slice0002_stain-LY_DF.tif
+        sub-Ken1_sample-slice0009_photo.json
+        sub-Ken1_sample-slice0009_photo.tif
+        sub-Ken1_sample-slice0009_stain-Nissl_BF.json
+        sub-Ken1_sample-slice0009_stain-Nissl_BF.tif
+        sub-Ken1_sample-slice0010_photo.json
+        sub-Ken1_sample-slice0010_photo.tif
+        sub-Ken1_sample-slice0010_stain-LY_DF.json
+        sub-Ken1_sample-slice0010_stain-LY_DF.tif
+    sub-Ken2/  
+      dwi/
+        sub-Ken2_sample-brain_acq-DSI_dwi.bval
+        sub-Ken2_sample-brain_acq-DSI_dwi.bvec
+        sub-Ken2_sample-brain_acq-DSI_dwi.json
+        sub-Ken2_sample-brain_acq-DSI_dwi.nii.gz
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bval
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bvec
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.json
+        sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.nii.gz
+      micr/
+        sub-Ken2_sample-slice0001_photo.json
+        sub-Ken2_sample-slice0001_photo.tif
+        sub-Ken2_sample-slice0001_stain-Nissl_BF.json
+        sub-Ken2_sample-slice0001_stain-Nissl_BF.tif
+        sub-Ken2_sample-slice0002_photo.json
+        sub-Ken2_sample-slice0002_photo.tif
+        sub-Ken2_sample-slice0002_stain-LY_DF.json
+        sub-Ken2_sample-slice0002_stain-LY_DF.tif
+        sub-Ken2_sample-slice0003_photo.json
+        sub-Ken2_sample-slice0003_photo.tif
+        sub-Ken2_sample-slice0003_stain-FR_DF.json
+        sub-Ken2_sample-slice0003_stain-FR_DF.tif
+        sub-Ken2_sample-slice0009_photo.json
+        sub-Ken2_sample-slice0009_photo.tif
+        sub-Ken2_sample-slice0009_stain-Nissl_BF.json
+        sub-Ken2_sample-slice0009_stain-Nissl_BF.tif
+        sub-Ken2_sample-slice0010_photo.json
+        sub-Ken2_sample-slice0010_photo.tif
+        sub-Ken2_sample-slice0010_stain-LY_DF.json
+        sub-Ken2_sample-slice0010_stain-LY_DF.tif
+        sub-Ken2_sample-slice0011_photo.json
+        sub-Ken2_sample-slice0011_photo.tif
+        sub-Ken2_sample-slice0011_stain-FR_DF.json
+        sub-Ken2_sample-slice0011_stain-FR_DF.tif
+  derivatives/
+    sub-Ken1/
+      dwi/
+        ...
+      scenes/
+        ...
+      xfms/
+        ...
+    sub-Ken2/
+      dwi/
+        ...
+      scenes/
+        ...
+      xfms/
+        ...
+</code></pre></div>
+<p>The files and subdirectories in this example dataset are described in detail below.</p>
+<h3 id="top-level-files">Top-level files<a class="headerlink" href="#top-level-files" title="Permanent link">&para;</a></h3>
+<h4 id="dataset_descriptionjson">dataset_description.json<a class="headerlink" href="#dataset_descriptionjson" title="Permanent link">&para;</a></h4>
+<p>This text file is <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#dataset_descriptionjson">described in detail in the BIDS specification</a>. A minimal <code>dataset_description.json</code> would look like this:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Name&quot;: &quot;Seminal post mortem dMRI and histology dataset from the laboratory of Dr. Barbara Millicent Roberts&quot;,
+    &quot;BIDSVersion&quot;: &quot;1.9.0&quot;
+}
+</code></pre></div>
+<h4 id="participantstsv">participants.tsv<a class="headerlink" href="#participantstsv" title="Permanent link">&para;</a></h4>
+<p>This text file is <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#participants-file">described in detail in the BIDS specification</a>. For this dataset, the <code>participants.tsv</code> might look like this:</p>
+<div class="highlight"><pre><span></span><code>participant_id age sex diagnosis
+sub-Ken1 43 M healthy
+sub-Ken2 61 M hypertension
+</code></pre></div>
+<h4 id="samplestsv">samples.tsv<a class="headerlink" href="#samplestsv" title="Permanent link">&para;</a></h4>
+<p>This text file is <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files.html#samples-file">described in detail in the BIDS specification</a>. For this dataset, the <code>samples.tsv</code> would look like this:</p>
+<div class="highlight"><pre><span></span><code>participant_id sample_id sample_type
+sub-Ken1 sample-brain tissue
+sub-Ken1 sample-slice0001 tissue
+sub-Ken1 sample-slice0002 tissue
+sub-Ken1 sample-slice0009 tissue
+sub-Ken1 sample-slice0010 tissue
+sub-Ken2 sample-brain tissue
+sub-Ken2 sample-slice0001 tissue
+sub-Ken2 sample-slice0002 tissue
+sub-Ken2 sample-slice0003 tissue
+sub-Ken2 sample-slice0009 tissue
+sub-Ken2 sample-slice0010 tissue
+sub-Ken2 sample-slice0011 tissue
+</code></pre></div>
+<p>Label the sample as <code>brain</code> if the whole brain was imaged. Label it as <code>lefthemi</code> or <code>righthemi</code> if a whole hemisphere was imaged.</p>
+<h3 id="rawdata">rawdata/<a class="headerlink" href="#rawdata" title="Permanent link">&para;</a></h3>
+<p>This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains raw image data files named according to the BIDS specification.</p>
+<p>The name of every image or other data file under <code>rawdata/</code> must start with a subject and sample label, in that order. Examples: 
+* <code>sub-Ken1_sample-brain_*.nii.gz</code>: NIfTI images of the whole brain of subject Ken1
+* <code>sub-Ken2_sample-slice0001_*.json</code>: metadata files associated with images of a section of subject Ken2</p>
+<h4 id="dwi">dwi/<a class="headerlink" href="#dwi" title="Permanent link">&para;</a></h4>
+<p>This directory contains dMRI data files <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetic-resonance-imaging-data.html#diffusion-imaging-data">as described in detail in the BIDS specification</a>. </p>
+<p>In this example the data include images (<code>.nii.gz</code>), b-value tables (<code>.bval</code>), gradient tables (<code>.bvec</code>), and metadata (<code>.json</code>). The name of every image or other data file under <code>rawdata/dwi/</code> must contain the subject, sample, and acquisition label, in that order, followed by the <code>dwi</code> suffix. Examples:
+* <code>sub-Ken1_sample-brain_acq-DSI_dwi.nii.gz</code>: NIfTI volumes of DWIs acquired with a DSI scheme from the whole brain of subject Ken1
+* <code>sub-Ken2_sample-brain_acq-MulShellMulTE_dwi.bval</code>: b-value table of a scan acquired with a multi-shell, multi-echo scheme, from the whole brain of subject Ken2</p>
+<h4 id="micr">micr/<a class="headerlink" href="#micr" title="Permanent link">&para;</a></h4>
+<p>This directory contains microscopy data files <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/microscopy.html">as described in detail in the BIDS specification</a>.</p>
+<p>In this example the data include images (<code>.tif</code>) and metadata (<code>.json</code>) from multiple brain sections. For each section there is a blockface photo (<code>_photo</code>) and a histological stain (<code>_stain</code>). Sections from Ken1 and Ken2 were either processed with a Nissl stain and imaged under brightfield microscopy (<code>_BF</code>), or processed for the fluorescent tracer Lucifer Yellow (<code>LY</code>) and imaged under darkfield microscopy (<code>_DF</code>). Additional sections from Ken2 were processed for the fluorescent tracer Fluoro-Ruby (<code>FR</code>) and imaged under darkfield microscopy (<code>_DF</code>).</p>
+<h3 id="derivatives">derivatives/<a class="headerlink" href="#derivatives" title="Permanent link">&para;</a></h3>
+<p>This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there can also be directories for saving files that are typically produced by co-analyzing images of more than one modality, e.g., <code>xfms/</code> for transform files or <code>scenes/</code> for scene files.</p>
+<p>The name of every image or data file under <code>derivatives/</code> must start its subject and sample label, in that order. For any files that have been transformed to a space other than the native space, i.e., the one where the images were acquired, this must be followed by a space label. Do not use a space label for files that are in the native space. The name of the file must end with a description label that includes the methodology followed by the name of the derivative. Examples:
+* <code>sub-Ken1_sample-brain_desc-DTI_FA.nii.gz</code>: a fractional anisotropy (FA) map derived from a diffusion tensor imaging (DTI) analysis of a whole-brain scan of subject Ken1, in its native (individual DWI) space
+* <code>sub-Ken2_sample-brain_space-CIT168_desc-CSD_tractography.trk</code>: a tractogram derived from a constrained spherical deconvolution (CSD) analysis of a whole-brain scan of subject Ken2, transformed to CIT168 template space</p>
+<h4 id="special-case-high-res-histology-annotation">Special case: high-res histology annotation<a class="headerlink" href="#special-case-high-res-histology-annotation" title="Permanent link">&para;</a></h4>
+<p>All annotation files use the following naming scheme:
+<code>&lt;dataset-name&gt; + _desc-[label] + _suffix.ome.zarr</code>
+where <code>[label]</code> is replaced by the annotator's initials and <code>_suffix</code> indicates the type of segmentations being annotated. Specifically, when annotating discrete segmentations, use <code>_dseg</code> as the suffix (see the <a href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#discrete-segmentations">BIDS spec on discrete segmentations</a>).</p>
+<p>For example, an annotator with an initial JS annotating discrete segments would name the annotation file as <code>000003_sub-MR243_sample-slice0000slice0004_stain-LY_DF_desc-JS_dseg.ome.zarr</code></p>
+<p>A <code>&lt;matches&gt;.tsv</code> file could be included to map the IDs (integer values) of the discrete segmentations to the custom labels, where <code>&lt;matches&gt;</code> is replaced by the name of the annotation file. It contains a lookup table with the following columns (see the <a href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">BIDS spec on custom TSV</a>):
+<div class="highlight"><pre><span></span><code>index  name
+1      Single Fiber
+2      Light Bundle
+3      Moderate Bundle
+...
+</code></pre></div></p>
+<h2 id="upload-your-data">Upload your data<a class="headerlink" href="#upload-your-data" title="Permanent link">&para;</a></h2>
+<p>If you are uploading to a new or existing dataset on lincbrain.org, please ensure that you have the <code>dandiset.yaml</code> and <code>dataset_description.json</code> files in your local directory (i.e. the <code>/path/to/my/staging/area/101010</code> directory in the example above).</p>
+<p>Upload the data from your local machine to lincbrain.org:</p>
+<div class="highlight"><pre><span></span><code>cd /path/to/my/staging/area/101010
+dandi upload -i linc
+</code></pre></div>
+<p>Check the output in your terminal for validation errors. If there were no errors, your data files should now appear on lincbrain.org.</p>
+<h2 id="delete-data-files-or-directories">Delete data files or directories<a class="headerlink" href="#delete-data-files-or-directories" title="Permanent link">&para;</a></h2>
+<p>Individual data files can be deleted on lincbrain.org by clicking on the trashcan icon next to each file. Alternatively, directories or files can be deleted from the command line.</p>
+<p>The following examples delete a directory named "horses" on lincbrain.org:</p>
+<div class="highlight"><pre><span></span><code>dandi delete -i linc /path/to/my/staging/area/101010/rawdata/Ken2/horses
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>dandi delete -i linc &quot;https://lincbrain.org/dandiset/101010/draft/files?location=rawdata%2Fsub-Ken2%2Fhorses&quot;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://connects.mgh.harvard.edu/" target="_blank" rel="noopener" title="Homepage" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://mit-lincbrain.slack.com/" target="_blank" rel="noopener" title="Slack" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/lincbrain" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hub.docker.com/u/lincbrain" target="_blank" rel="noopener" title="Docker Hub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
