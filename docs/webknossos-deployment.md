@@ -239,7 +239,12 @@ Your clone should be all set now!
 Note that if you are renewing the certificate, the application cannot be running so proceed with the following steps:
 
 1. Notify users
-2. Stop the application
+2. Connect to the `webknossos` instance on the AWS LINC account
+3. Change the working directory
+  ```shell
+  cd opt/webknossos/
+  ```
+4. Stop the application
   ```shell
   sudo docker-compose down
   ```
