@@ -39,8 +39,10 @@ nav:
     - Export Webknossos annotation: "webknossos-export-annotation.md"
     - Deployment: "webknossos-deployment.md"
     - Development: "webknossos-development.md"
-  - Engaging Cluster: "engaging.md"
-  - JupyterHub: "jupyterhub.md"
+  - Computing:
+    - Engaging Cluster: "engaging.md"
+    - JupyterHub: "jupyterhub.md"
+    - Stream Zarr: "stream-zarr.ipynb"
   - DANDI Docs: https://docs.dandiarchive.org
   - DANDI Client: https://dandi.readthedocs.io
   - Data:
@@ -71,6 +73,9 @@ markdown_extensions:
 plugins:
   - search
   - open-in-new-tab
+  - mkdocs-jupyter:
+    ignore_h1_titles: True
+    include: ["*.ipynb"]
 
 # Customize theme
 extra:
