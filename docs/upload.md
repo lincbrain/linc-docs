@@ -191,6 +191,7 @@ Label the sample as `brain` if the whole brain was imaged. Label it as `lefthemi
 This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains raw image data files named according to the BIDS specification.
 
 The name of every image or other data file under `rawdata/` must start with a subject and sample label, in that order. Examples: 
+
 * `sub-Ken1_sample-brain_*.nii.gz`: NIfTI images of the whole brain of subject Ken1
 * `sub-Ken2_sample-slice0001_*.json`: metadata files associated with images of a section of subject Ken2
 
@@ -210,6 +211,7 @@ In this example the data include images (`.tif`) and metadata (`.json`) from mul
 This directory contains one subdirectory for each brain, which contains one subdirectory for each modality, which in turn contains any data files that were produced by analyzing the raw data of that modality. At the same level as the modality-specific directories, there can also be directories for saving files that are typically produced by co-analyzing images of more than one modality, e.g., `xfms/` for transform files or `scenes/` for scene files.
 
 The name of every image or data file under `derivatives/` must start its subject and sample label, in that order. For any files that have been transformed to a space other than the native space, i.e., the one where the images were acquired, this must be followed by a space label. Do not use a space label for files that are in the native space. The name of the file must end with a description label that includes the methodology followed by the name of the derivative. Examples:
+
 * `sub-Ken1_sample-brain_desc-DTI_FA.nii.gz`: a fractional anisotropy (FA) map derived from a diffusion tensor imaging (DTI) analysis of a whole-brain scan of subject Ken1, in its native (individual DWI) space
 * `sub-Ken2_sample-brain_space-CIT168_desc-CSD_tractography.trk`: a tractogram derived from a constrained spherical deconvolution (CSD) analysis of a whole-brain scan of subject Ken2, transformed to CIT168 template space
 
