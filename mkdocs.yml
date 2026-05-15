@@ -46,6 +46,7 @@ nav:
   - DANDI Docs: https://docs.dandiarchive.org
   - DANDI Client: https://dandi.readthedocs.io
   - Data:
+    - Identifiers: "data/identifiers.md"
     - HiP-CT: "data/hipct.md"
   - Design Docs:
     - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
