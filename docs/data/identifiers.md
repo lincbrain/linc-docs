@@ -6,13 +6,13 @@
 | I58                                                          | Hb0                  | Human   |
 | I74                                                          | Hb1                  | Human   |
 | I71                                                          | Hb2                  | Human   |
-| NPBB328 (Pilot brain)                                        | PH1                  | Human   |
+| NPBB328 (Pilot data)                                         | PH1                  | Human   |
 | I35                                                          | Pending              | Human   |
 | EXC004                                                       | Internal only        | Human   |
 | EXC025                                                       | Internal only        | Human   |
 | S45                                                          | Internal only        | Human   |
 | MF283                                                        | M1                   | Macaque |
-| MR271 (Pilot brain, Haber Lab)                               | PM1                  | Macaque |
+| MR271 (Pilot data, Haber Lab)                                | PM1                  | Macaque |
 | MF168                                                        | Pending              | Macaque |
 | MN131 (DANDI)<br>MN131 C-18 (Haber Lab)<br>CB1-SH2a (Wu Lab) | Internal only        | Macaque |
 | MF282 (DANDI, Haber Lab)<br>CB1-SH3c (Wu Lab)                | Internal only        | Macaque |
