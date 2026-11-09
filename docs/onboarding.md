@@ -15,7 +15,7 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 - The LINC team you will be on (see [LINC teams](https://connects.mgh.harvard.edu/people/))
 - Your GitHub username
 - Your Hugging Face username (if you have one)
-- The details listed on the [Engaging Cluster](engaging.md) page, if you need cluster access
+- The details listed on the [Engaging Cluster](engaging.md) page, if you need cluster access for analysis.
 
 ## 3. Get access to LINC tools
 
