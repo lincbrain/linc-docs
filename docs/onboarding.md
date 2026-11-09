@@ -27,6 +27,6 @@ Kabi will set up your accounts:
 - [GitHub (lincbrain)](https://github.com/lincbrain)
 - [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you shared a Hugging Face username
 - [Neuroglass](https://linc.neuroglass.io)
-- [WebKnossos](https://webknossos.lincbrain.org/)
+- WebKnossos
     - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
 - [MIT Engaging cluster](engaging.md), if you need cluster access
