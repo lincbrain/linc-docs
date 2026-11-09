@@ -14,19 +14,19 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 - Your email address
 - The LINC team you will be on (see [LINC teams](https://connects.mgh.harvard.edu/people/))
 - Your GitHub username
-- Your Hugging Face username (if available)
-- If you need access to the MIT Engaging cluster for analysis, also follow the instructions on the [Engaging Cluster](engaging.md) page.
+- Your Hugging Face username (if you have one)
+- The details listed on the [Engaging Cluster](engaging.md) page, if you need cluster access
 
 ## 3. Get access to LINC tools
 
-Kabi will set up your accounts:
+Kabi will set you up with:
 
-- [lincbrain.org](https://lincbrain.org) and [dandiarchive.org](https://dandiarchive.org) accounts
+- Approved [lincbrain.org](https://lincbrain.org) and [dandiarchive.org](https://dandiarchive.org) accounts
 - [LINC Slack](https://mit-lincbrain.slack.com/) workspace
 - Computational team weekly meeting (Google Calendar invite with Zoom link)
 - [GitHub (lincbrain)](https://github.com/lincbrain)
-- [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you shared a Hugging Face username
+- [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you have an account
 - [Neuroglass](https://linc.neuroglass.io)
-- WebKnossos
-    - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
-- [MIT Engaging cluster](engaging.md), if you need cluster access
+- Webknossos
+    - To open Webknossos, log in to [lincbrain.org](https://lincbrain.org) and click **Webknossos**.
+- [MIT Engaging Cluster](engaging.md), if you need cluster access
