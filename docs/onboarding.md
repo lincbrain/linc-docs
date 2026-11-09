@@ -19,7 +19,7 @@ Create accounts on the following sites.  Kabi will approve your accounts.
 - [lincbrain.org](https://lincbrain.org)
 - [dandiarchive.org](https://dandiarchive.org)
 
-## 3. Get added to LINC communication and tools
+## 3. Get access to Slack, meetings, and LINC tools
 
 Kabi will add you to:
 
