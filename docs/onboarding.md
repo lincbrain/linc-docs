@@ -31,11 +31,3 @@ Kabi will add you to:
 
 If you need to run analyses on the MIT Engaging cluster, follow the instructions on the [Engaging Cluster](engaging.md) page.
 
-## Checklist
-
-- [ ] Emailed Kabi with email, GitHub username, and LINC team
-- [ ] Signed up on lincbrain.org
-- [ ] Signed up on dandiarchive.org
-- [ ] Joined the LINC Slack and the Computational team weekly meeting
-- [ ] Added to GitHub, Neuroglass, and WebKnossos
-- [ ] (Optional) Set up access to the Engaging cluster
