@@ -21,11 +21,13 @@ If you need access to the MIT Engaging cluster for analysis, also follow the ins
 
 ## 3. Get access to Slack, meetings, and LINC tools
 
-Kabi will approve your lincbrain.org and dandiarchive.org accounts, and add you to:
+Kabi will:
 
-- The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
-- The Computational team weekly meeting (Google Calendar invite with Zoom link)
-- [GitHub (lincbrain)](https://github.com/lincbrain)
-- [Neuroglass](https://linc.neuroglass.io)
-- [WebKnossos](https://webknossos.lincbrain.org/)
-    - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
+- Approve your lincbrain.org and dandiarchive.org accounts
+- Add you to:
+    - The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
+    - The Computational team weekly meeting (Google Calendar invite with Zoom link)
+    - [GitHub (lincbrain)](https://github.com/lincbrain)
+    - [Neuroglass](https://linc.neuroglass.io)
+    - [WebKnossos](https://webknossos.lincbrain.org/)
+        - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
