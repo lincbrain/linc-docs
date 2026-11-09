@@ -4,8 +4,6 @@ Welcome to the LINC project!  Follow the steps below to get set up.
 
 ## 1. Sign up for data platform accounts
 
-Create accounts on the following sites.
-
 - [lincbrain.org](https://lincbrain.org)
 - [dandiarchive.org](https://dandiarchive.org)
 
