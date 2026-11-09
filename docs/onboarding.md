@@ -28,3 +28,4 @@ Kabi will add you to:
 - [GitHub (lincbrain)](https://github.com/lincbrain)
 - [Neuroglass](https://linc.neuroglass.io)
 - [WebKnossos](https://webknossos.lincbrain.org/)
+    - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
