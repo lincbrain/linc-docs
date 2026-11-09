@@ -10,6 +10,8 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 - Your GitHub username
 - The LINC team you will be on (see [LINC teams](https://connects.mgh.harvard.edu/people/))
 
+If you need access to the MIT Engaging cluster for analysis, also follow the instructions on the [Engaging Cluster](engaging.md) page.
+
 ## 2. Sign up for data platform accounts
 
 Create accounts on the following sites.  Kabi will approve your accounts.
@@ -26,8 +28,3 @@ Kabi will add you to:
 - [GitHub (lincbrain)](https://github.com/lincbrain)
 - [Neuroglass](https://linc.neuroglass.io)
 - [WebKnossos](https://webknossos.lincbrain.org/)
-
-## 4. (Optional) Get access to the MIT cluster
-
-If you need to run analyses on the MIT Engaging cluster, follow the instructions on the [Engaging Cluster](engaging.md) page.
-
