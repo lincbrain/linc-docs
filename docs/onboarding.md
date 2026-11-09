@@ -22,8 +22,8 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 Kabi will set up your accounts:
 
 - lincbrain.org and dandiarchive.org accounts
-- The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
-- The Computational team weekly meeting (Google Calendar invite with Zoom link)
+- [LINC Slack](https://mit-lincbrain.slack.com/) workspace
+- Computational team weekly meeting (Google Calendar invite with Zoom link)
 - [GitHub (lincbrain)](https://github.com/lincbrain)
 - [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you shared a Hugging Face username
 - [Neuroglass](https://linc.neuroglass.io)
