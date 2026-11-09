@@ -15,12 +15,13 @@ motor and psychiatric disorders.
 
 ## About this doc
 
-The LINC documentation is meant to share information across the LINC project investigators.  If you are new to the LINC project, you can start on the [Upload data](upload.md) page for a description of how to interact with the LINC data sharing platform.
+The LINC documentation is meant to share information across the LINC project investigators.  If you are new to the LINC project, please start with the [Onboarding](onboarding.md) page, and then see the [Upload data](upload.md) page for a description of how to interact with the LINC data sharing platform.
 
 Since the LINC infrastructure is a fork of the DANDI Archive, please refer to the [DANDI Docs](https://docs.dandiarchive.org) for comprehensive documentation.
 
 ## Quick Links
 
+- [Onboarding](onboarding.md)
 - [LINC Homepage](https://connects.mgh.harvard.edu/)
 - [LINC Data Sharing Platform](https://lincbrain.org/)
 - [LINC Project Code on GitHub](https://github.com/lincbrain)

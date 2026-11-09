@@ -30,6 +30,7 @@ theme:
 # Pages
 nav:
   - Welcome: "index.md"
+  - Onboarding: "onboarding.md"
   - Upload data: "upload.md"
   - Dashboard: "dashboard.md"
   - LINC Convert: https://convert.lincbrain.org
