@@ -2,7 +2,14 @@
 
 Welcome to the LINC project!  Follow the steps below to get set up.
 
-## 1. Send your details to Kabi
+## 1. Sign up for data platform accounts
+
+Create accounts on the following sites.  Kabi will approve your accounts.
+
+- [lincbrain.org](https://lincbrain.org)
+- [dandiarchive.org](https://dandiarchive.org)
+
+## 2. Send your details to Kabi
 
 Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 
@@ -11,13 +18,6 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 - The LINC team you will be on (see [LINC teams](https://connects.mgh.harvard.edu/people/))
 
 If you need access to the MIT Engaging cluster for analysis, also follow the instructions on the [Engaging Cluster](engaging.md) page.
-
-## 2. Sign up for data platform accounts
-
-Create accounts on the following sites.  Kabi will approve your accounts.
-
-- [lincbrain.org](https://lincbrain.org)
-- [dandiarchive.org](https://dandiarchive.org)
 
 ## 3. Get access to Slack, meetings, and LINC tools
 
