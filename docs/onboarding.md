@@ -24,7 +24,7 @@ Create accounts on the following sites.  Kabi will approve your accounts.
 Kabi will add you to:
 
 - The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
-- The Computational team weekly meeting
+- The Computational team weekly meeting (Google Calendar invite with Zoom link)
 - [GitHub (lincbrain)](https://github.com/lincbrain)
 - [Neuroglass](https://linc.neuroglass.io)
 - [WebKnossos](https://webknossos.lincbrain.org/)
