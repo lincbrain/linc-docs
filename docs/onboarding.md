@@ -19,14 +19,13 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 
 ## 3. Get access to Slack, meetings, and LINC tools
 
-Kabi will:
+Kabi will set up your accounts:
 
-- Approve your lincbrain.org and dandiarchive.org accounts
-- Add you to:
-    - The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
-    - The Computational team weekly meeting (Google Calendar invite with Zoom link)
-    - [GitHub (lincbrain)](https://github.com/lincbrain)
-    - [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you shared a Hugging Face username
-    - [Neuroglass](https://linc.neuroglass.io)
-    - [WebKnossos](https://webknossos.lincbrain.org/)
-        - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
+- lincbrain.org and dandiarchive.org accounts
+- The [LINC Slack](https://mit-lincbrain.slack.com/) workspace
+- The Computational team weekly meeting (Google Calendar invite with Zoom link)
+- [GitHub (lincbrain)](https://github.com/lincbrain)
+- [Hugging Face (lincbrain)](https://huggingface.co/lincbrain), if you shared a Hugging Face username
+- [Neuroglass](https://linc.neuroglass.io)
+- [WebKnossos](https://webknossos.lincbrain.org/)
+    - To open WebKnossos, log in to [lincbrain.org](https://lincbrain.org) and click **WebKnossos**.
