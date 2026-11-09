@@ -17,7 +17,7 @@ Email [kabi@mit.edu](mailto:kabi@mit.edu) with:
 - Your Hugging Face username (if available)
 - If you need access to the MIT Engaging cluster for analysis, also follow the instructions on the [Engaging Cluster](engaging.md) page.
 
-## 3. Get access to Slack, meetings, and LINC tools
+## 3. Get access to LINC tools
 
 Kabi will set up your accounts:
 
