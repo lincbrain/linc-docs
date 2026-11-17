@@ -2,7 +2,7 @@
 .md-nav a.md-nav__link[href^="http://"]::after,
 .md-nav a.md-nav__link[href^="https://"]::after {
   content: "↗";
-  margin-left: -0.25rem; /* offset the 0.4rem flex gap on nav links */
+  margin-left: -0.25rem;
   font-size: 0.85em;
   opacity: 0.7;
 }
