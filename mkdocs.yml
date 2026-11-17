@@ -35,6 +35,7 @@ nav:
   - Dashboard: "dashboard.md"
   - LINC Convert: https://convert.lincbrain.org
   - OpticStream: https://opticstream.lincbrain.org
+  - Microstructure.jl: https://tinggong.github.io/Microstructure.jl/stable/
   - Visualize data in Neuroglancer: "neuroglancer.md"
   - Webknossos:
     - Add Webknossos dataset: "webknossos-add-dataset.md"
