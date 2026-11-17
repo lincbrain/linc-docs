@@ -1,0 +1,8 @@
+/* Mark navigation links that point to external sites with a small arrow. */
+.md-nav a.md-nav__link[href^="http://"]::after,
+.md-nav a.md-nav__link[href^="https://"]::after {
+  content: "↗";
+  margin-left: -0.25rem;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
